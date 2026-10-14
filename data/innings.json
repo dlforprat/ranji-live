@@ -1,0 +1,560 @@
+[
+ {
+  "id": "bih-up-1",
+  "matchId": "bih-up",
+  "n": 1,
+  "team": "Uttar Pradesh",
+  "total": "540",
+  "batting": "Madhav Kaushik 150 | Rinku Singh 112 | Aaradhya Yadav 84",
+  "bowling": "Amod Yadav 4-91"
+ },
+ {
+  "id": "bih-up-2",
+  "matchId": "bih-up",
+  "n": 2,
+  "team": "Bihar",
+  "total": "141",
+  "batting": "Mangal Mahrour 25",
+  "bowling": "Kartik Yadav 4-26"
+ },
+ {
+  "id": "bih-up-3",
+  "matchId": "bih-up",
+  "n": 3,
+  "team": "Bihar",
+  "total": "132 (f/o)",
+  "batting": "Mangal Mahrour 27",
+  "bowling": "Zeeshan Ansari 4-40"
+ },
+ {
+  "id": "goa-bar-1",
+  "matchId": "goa-bar",
+  "n": 1,
+  "team": "Baroda",
+  "total": "472/8d",
+  "batting": "Atit Sheth 99 | Mitesh Patel 81 | Shashwat Rawat 69 | Deepak Hooda 52",
+  "bowling": "Mohit Redkar 3-120"
+ },
+ {
+  "id": "goa-bar-2",
+  "matchId": "goa-bar",
+  "n": 2,
+  "team": "Goa",
+  "total": "199",
+  "batting": "Lalit Yadav 54",
+  "bowling": "Mahesh Pithiya 5-58 | Bhargav Bhatt 4-51"
+ },
+ {
+  "id": "goa-bar-3",
+  "matchId": "goa-bar",
+  "n": 3,
+  "team": "Goa",
+  "total": "138 (f/o)",
+  "batting": "Abhinav Tejrana 47",
+  "bowling": "Mahesh Pithiya 2-38"
+ },
+ {
+  "id": "vid-pud-1",
+  "matchId": "vid-pud",
+  "n": 1,
+  "team": "Vidarbha",
+  "total": "428",
+  "batting": "Akshay Wadkar 198 | Yash Rathod 134",
+  "bowling": "Sagar Udeshi 4-86"
+ },
+ {
+  "id": "vid-pud-2",
+  "matchId": "vid-pud",
+  "n": 2,
+  "team": "Puducherry",
+  "total": "313",
+  "batting": "Ritesh Gudge 95",
+  "bowling": "Parth Rekhade 3-64 | Aman Mokhade 3-35"
+ },
+ {
+  "id": "vid-pud-3",
+  "matchId": "vid-pud",
+  "n": 3,
+  "team": "Vidarbha",
+  "total": "175/3d",
+  "batting": "Aman Mokhade 65",
+  "bowling": ""
+ },
+ {
+  "id": "vid-pud-4",
+  "matchId": "vid-pud",
+  "n": 4,
+  "team": "Puducherry",
+  "total": "18/2",
+  "batting": "",
+  "bowling": ""
+ },
+ {
+  "id": "jk-mp-1",
+  "matchId": "jk-mp",
+  "n": 1,
+  "team": "Madhya Pradesh",
+  "total": "196",
+  "batting": "Shubham Sharma 79",
+  "bowling": "Rohit Sharma 5-36 | Sunil Kumar 4-69"
+ },
+ {
+  "id": "jk-mp-2",
+  "matchId": "jk-mp",
+  "n": 2,
+  "team": "Jammu & Kashmir",
+  "total": "120",
+  "batting": "Kanhaiya Wadhawan 35*",
+  "bowling": "Aryan Pandey 3-29 | Avesh Khan 3-44"
+ },
+ {
+  "id": "jk-mp-3",
+  "matchId": "jk-mp",
+  "n": 3,
+  "team": "Madhya Pradesh",
+  "total": "249/6d",
+  "batting": "",
+  "bowling": "Auqib Nabi 3-53"
+ },
+ {
+  "id": "jk-mp-4",
+  "matchId": "jk-mp",
+  "n": 4,
+  "team": "Jammu & Kashmir",
+  "total": "61/6",
+  "batting": "Kanhaiya Wadhawan 26 (retd hurt) | Lone Nasir 13",
+  "bowling": "Avesh Khan 3-16 | Aryan Pandey 3-29"
+ },
+ {
+  "id": "pun-asm-1",
+  "matchId": "pun-asm",
+  "n": 1,
+  "team": "Assam",
+  "total": "373",
+  "batting": "Sibsankar Roy 143* | Denish Das 103",
+  "bowling": "Umesh Yadav 5-70"
+ },
+ {
+  "id": "pun-asm-2",
+  "matchId": "pun-asm",
+  "n": 2,
+  "team": "Punjab",
+  "total": "478/6d",
+  "batting": "",
+  "bowling": ""
+ },
+ {
+  "id": "pun-asm-3",
+  "matchId": "pun-asm",
+  "n": 3,
+  "team": "Assam",
+  "total": "49/3",
+  "batting": "",
+  "bowling": ""
+ },
+ {
+  "id": "sau-chh-1",
+  "matchId": "sau-chh",
+  "n": 1,
+  "team": "Saurashtra",
+  "total": "392",
+  "batting": "Prerak Mankad 129 | Ravindra Jadeja 102 | Chirag Jani 83",
+  "bowling": ""
+ },
+ {
+  "id": "sau-chh-2",
+  "matchId": "sau-chh",
+  "n": 2,
+  "team": "Chhattisgarh",
+  "total": "312",
+  "batting": "Anuj Tiwary 72 | Mayank Verma 68",
+  "bowling": "Ravindra Jadeja 3-40"
+ },
+ {
+  "id": "sau-chh-3",
+  "matchId": "sau-chh",
+  "n": 3,
+  "team": "Saurashtra",
+  "total": "229/1",
+  "batting": "",
+  "bowling": ""
+ },
+ {
+  "id": "ap-kar-1",
+  "matchId": "ap-kar",
+  "n": 1,
+  "team": "Karnataka",
+  "total": "274",
+  "batting": "R Smaran 126 | KL Shrijith 58",
+  "bowling": "Saurabh Kumar 3-69"
+ },
+ {
+  "id": "ap-kar-2",
+  "matchId": "ap-kar",
+  "n": 2,
+  "team": "Andhra",
+  "total": "418",
+  "batting": "Seeram Rahul 119 | Revanth Reddy 97",
+  "bowling": "Shikhar Shetty 6-115"
+ },
+ {
+  "id": "ap-kar-3",
+  "matchId": "ap-kar",
+  "n": 3,
+  "team": "Karnataka",
+  "total": "337/9d",
+  "batting": "Karun Nair 145*",
+  "bowling": "Lalith Mohan 4-111 | Saurabh Kumar 3-79"
+ },
+ {
+  "id": "ap-kar-4",
+  "matchId": "ap-kar",
+  "n": 4,
+  "team": "Andhra",
+  "total": "55/4",
+  "batting": "",
+  "bowling": "Rithesh Bhatkal 1-12"
+ },
+ {
+  "id": "hyd-tri-1",
+  "matchId": "hyd-tri",
+  "n": 1,
+  "team": "Tripura",
+  "total": "134",
+  "batting": "Bikramkumar Das 50",
+  "bowling": "G Anikethreddy 5-21"
+ },
+ {
+  "id": "hyd-tri-2",
+  "matchId": "hyd-tri",
+  "n": 2,
+  "team": "Hyderabad",
+  "total": "294",
+  "batting": "Ruthik Mendhe 61",
+  "bowling": "Sandip Sarkar 8-96"
+ },
+ {
+  "id": "hyd-tri-3",
+  "matchId": "hyd-tri",
+  "n": 3,
+  "team": "Tripura",
+  "total": "120",
+  "batting": "",
+  "bowling": "Tanay Thyagarajan 6-52"
+ },
+ {
+  "id": "guj-odi-1",
+  "matchId": "guj-odi",
+  "n": 1,
+  "team": "Odisha",
+  "total": "324",
+  "batting": "Gourav Choudhury 137 | Sandeep Pattnaik 69",
+  "bowling": "Arzan Nagwaswalla 3-65"
+ },
+ {
+  "id": "guj-odi-2",
+  "matchId": "guj-odi",
+  "n": 2,
+  "team": "Gujarat",
+  "total": "439",
+  "batting": "Vedant Trivedi 108 | Aarya Desai 94 | Urvil Patel 85",
+  "bowling": "Biswal 5-118"
+ },
+ {
+  "id": "guj-odi-3",
+  "matchId": "guj-odi",
+  "n": 3,
+  "team": "Odisha",
+  "total": "161",
+  "batting": "",
+  "bowling": "Siddharth Desai 5-36"
+ },
+ {
+  "id": "guj-odi-4",
+  "matchId": "guj-odi",
+  "n": 4,
+  "team": "Gujarat",
+  "total": "47/0",
+  "batting": "",
+  "bowling": ""
+ },
+ {
+  "id": "ben-del-1",
+  "matchId": "ben-del",
+  "n": 1,
+  "team": "Delhi",
+  "total": "240",
+  "batting": "Hrithik Shokeen 56",
+  "bowling": "Mohammed Shami 4-30"
+ },
+ {
+  "id": "ben-del-2",
+  "matchId": "ben-del",
+  "n": 2,
+  "team": "Bengal",
+  "total": "429",
+  "batting": "Abishek Porel 149 | Sudip Gharami 133",
+  "bowling": "Ayush Badoni 5-43"
+ },
+ {
+  "id": "ben-del-3",
+  "matchId": "ben-del",
+  "n": 3,
+  "team": "Delhi",
+  "total": "261/9 (f/o)",
+  "batting": "Ayush Badoni 77+ | Anuj Rawat 39",
+  "bowling": "Aamir Gani 2-80"
+ },
+ {
+  "id": "jhk-ker-1",
+  "matchId": "jhk-ker",
+  "n": 1,
+  "team": "Jharkhand",
+  "total": "587",
+  "batting": "Aditya Singh 147 | Shikhar Mohan 143 | Virat Singh 108",
+  "bowling": "Vaisakh Chandran 5-166 | Jalaj Saxena 3-126"
+ },
+ {
+  "id": "jhk-ker-2",
+  "matchId": "jhk-ker",
+  "n": 2,
+  "team": "Kerala",
+  "total": "395",
+  "batting": "Abhishek P Nair 126 | Aditya Sarwate 95",
+  "bowling": "Utkarsh Singh 4-69 | Manishi 4-92"
+ },
+ {
+  "id": "jhk-ker-3",
+  "matchId": "jhk-ker",
+  "n": 3,
+  "team": "Kerala",
+  "total": "62/2 (f/o)",
+  "batting": "Sachin Baby 37 | Abhishek P Nair 23",
+  "bowling": "Utkarsh Singh 1-15"
+ },
+ {
+  "id": "ser-mah-1",
+  "matchId": "ser-mah",
+  "n": 1,
+  "team": "Maharashtra",
+  "total": "333",
+  "batting": "Ankit Bawne 118 | Prithvi Shaw 70",
+  "bowling": "Arjun Sharma 4-75"
+ },
+ {
+  "id": "ser-mah-2",
+  "matchId": "ser-mah",
+  "n": 2,
+  "team": "Services",
+  "total": "227",
+  "batting": "Nitin Tanwar 61",
+  "bowling": "Hitesh Walunj 5-51"
+ },
+ {
+  "id": "ser-mah-3",
+  "matchId": "ser-mah",
+  "n": 3,
+  "team": "Maharashtra",
+  "total": "141",
+  "batting": "",
+  "bowling": "Arjun Sharma 5-58"
+ },
+ {
+  "id": "ser-mah-4",
+  "matchId": "ser-mah",
+  "n": 4,
+  "team": "Services",
+  "total": "111/6",
+  "batting": "Nakul Sharma 32*",
+  "bowling": "Vicky Ostwal 3-48"
+ },
+ {
+  "id": "mum-chd-1",
+  "matchId": "mum-chd",
+  "n": 1,
+  "team": "Mumbai",
+  "total": "429",
+  "batting": "Siddhesh Lad 86 | Musheer Khan 65 | Tanush Kotian 58",
+  "bowling": "Raj Bawa 4-73"
+ },
+ {
+  "id": "mum-chd-2",
+  "matchId": "mum-chd",
+  "n": 2,
+  "team": "Chandigarh",
+  "total": "78",
+  "batting": "Nishunk Birla 33",
+  "bowling": "Tushar Deshpande 5-17 (hat-trick)"
+ },
+ {
+  "id": "mum-chd-3",
+  "matchId": "mum-chd",
+  "n": 3,
+  "team": "Chandigarh",
+  "total": "196 (f/o)",
+  "batting": "Arjun Azad 62",
+  "bowling": "Tanush Kotian 3-30 | Shams Mulani 3-69"
+ },
+ {
+  "id": "raj-tn-1",
+  "matchId": "raj-tn",
+  "n": 1,
+  "team": "Rajasthan",
+  "total": "363",
+  "batting": "Karan Lamba 113 | Rohan Rajbhar 95",
+  "bowling": "P Saravana Kumar 3-68"
+ },
+ {
+  "id": "raj-tn-2",
+  "matchId": "raj-tn",
+  "n": 2,
+  "team": "Tamil Nadu",
+  "total": "274",
+  "batting": "Andre Siddharth 81 | Pradosh Paul 58 | N Jagadeesan 55",
+  "bowling": "Kukna Ajay Singh 5-51"
+ },
+ {
+  "id": "raj-tn-3",
+  "matchId": "raj-tn",
+  "n": 3,
+  "team": "Rajasthan",
+  "total": "192/6d",
+  "batting": "",
+  "bowling": ""
+ },
+ {
+  "id": "raj-tn-4",
+  "matchId": "raj-tn",
+  "n": 4,
+  "team": "Tamil Nadu",
+  "total": "73/0",
+  "batting": "",
+  "bowling": ""
+ },
+ {
+  "id": "har-hp-1",
+  "matchId": "har-hp",
+  "n": 1,
+  "team": "Himachal Pradesh",
+  "total": "253",
+  "batting": "Akash Vasisht 113*",
+  "bowling": "Anshul Kamboj 4-56"
+ },
+ {
+  "id": "har-hp-2",
+  "matchId": "har-hp",
+  "n": 2,
+  "team": "Haryana",
+  "total": "296",
+  "batting": "Yashvardhan Dalal 72 | Ankit Kumar 59",
+  "bowling": "Aryaman Dhaliwal 4-72"
+ },
+ {
+  "id": "har-hp-3",
+  "matchId": "har-hp",
+  "n": 3,
+  "team": "Himachal Pradesh",
+  "total": "113",
+  "batting": "Vaibhav Kalta 31",
+  "bowling": "Parth Vats 3-22"
+ },
+ {
+  "id": "har-hp-4",
+  "matchId": "har-hp",
+  "n": 4,
+  "team": "Haryana",
+  "total": "74/3",
+  "batting": "",
+  "bowling": ""
+ },
+ {
+  "id": "rly-utk-1",
+  "matchId": "rly-utk",
+  "n": 1,
+  "team": "Railways",
+  "total": "278",
+  "batting": "Vivek Singh 112",
+  "bowling": "Devendra Singh Bora 5-49"
+ },
+ {
+  "id": "rly-utk-2",
+  "matchId": "rly-utk",
+  "n": 2,
+  "team": "Uttarakhand",
+  "total": "470",
+  "batting": "Saurabh Rawat 107 | Avneesh Sudha 90 | Jagadeesha Suchith 62",
+  "bowling": "Raj Choudhary 3-94"
+ },
+ {
+  "id": "rly-utk-3",
+  "matchId": "rly-utk",
+  "n": 3,
+  "team": "Railways",
+  "total": "156/2",
+  "batting": "",
+  "bowling": ""
+ },
+ {
+  "id": "sik-meg-1",
+  "matchId": "sik-meg",
+  "n": 1,
+  "team": "Sikkim",
+  "total": "245",
+  "batting": "Satyajeet Bachhav 45",
+  "bowling": "Ram Gurung 5-32"
+ },
+ {
+  "id": "sik-meg-2",
+  "matchId": "sik-meg",
+  "n": 2,
+  "team": "Meghalaya",
+  "total": "395",
+  "batting": "Jaskirat Singh 127 | Kishan Lyngdoh 78 | Swastik Chhetri 72",
+  "bowling": "Kranthi Kumar 5-71"
+ },
+ {
+  "id": "sik-meg-3",
+  "matchId": "sik-meg",
+  "n": 3,
+  "team": "Sikkim",
+  "total": "291/7",
+  "batting": "Parth Palawat 66",
+  "bowling": "Abhishek Kumar 3-43"
+ },
+ {
+  "id": "miz-man-1",
+  "matchId": "miz-man",
+  "n": 1,
+  "team": "Mizoram",
+  "total": "183",
+  "batting": "Chinmay Sutar 35",
+  "bowling": "Kishan Singha 6-52"
+ },
+ {
+  "id": "miz-man-2",
+  "matchId": "miz-man",
+  "n": 2,
+  "team": "Manipur",
+  "total": "251",
+  "batting": "Kangabam Priyojit 87 | Langlonyamba Keishangbam 54 | Kishan Singha 51",
+  "bowling": "Khiangte Vanrotlinga 5-66"
+ },
+ {
+  "id": "miz-man-3",
+  "matchId": "miz-man",
+  "n": 3,
+  "team": "Mizoram",
+  "total": "295",
+  "batting": "Chinmay Sutar 99 | Jehu Anderson 71 | Sahil Reza 51",
+  "bowling": "Kishan Singha 4-88 | Johnson Singh 3-15"
+ },
+ {
+  "id": "miz-man-4",
+  "matchId": "miz-man",
+  "n": 4,
+  "team": "Manipur",
+  "total": "185/7",
+  "batting": "",
+  "bowling": "Khiangte Vanrotlinga 3-21"
+ }
+]

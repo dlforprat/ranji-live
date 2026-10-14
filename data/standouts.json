@@ -1,0 +1,352 @@
+[
+ {
+  "rank": 1,
+  "player": "Sandip Sarkar",
+  "team": "Tripura",
+  "matchId": "hyd-tri",
+  "feat": "8-96",
+  "kind": "Bowling",
+  "note": "Fourth first-class game; best figures of the round",
+  "group": "B"
+ },
+ {
+  "rank": 2,
+  "player": "Kishan Singha",
+  "team": "Manipur",
+  "matchId": "miz-man",
+  "feat": "10 wkts in match",
+  "kind": "Bowling",
+  "note": "6-52 & 4-88 for Manipur",
+  "group": "Plate"
+ },
+ {
+  "rank": 3,
+  "player": "Arjun Sharma",
+  "team": "Services",
+  "matchId": "ser-mah",
+  "feat": "9 wkts in match",
+  "kind": "Bowling",
+  "note": "4-75 & 5-58; Services 111/6 at tea chasing 248",
+  "group": "C"
+ },
+ {
+  "rank": 4,
+  "player": "Akshay Wadkar",
+  "team": "Vidarbha",
+  "matchId": "vid-pud",
+  "feat": "198",
+  "kind": "Batting",
+  "note": "Top score of the round",
+  "group": "A"
+ },
+ {
+  "rank": 5,
+  "player": "Tanay Thyagarajan",
+  "team": "Hyderabad",
+  "matchId": "hyd-tri",
+  "feat": "9 wkts in match",
+  "kind": "Bowling",
+  "note": "6-52 in the second innings",
+  "group": "B"
+ },
+ {
+  "rank": 6,
+  "player": "Tushar Deshpande",
+  "team": "Mumbai",
+  "matchId": "mum-chd",
+  "feat": "5-17",
+  "kind": "Bowling",
+  "note": "Hat-trick; five in 16 balls",
+  "group": "D"
+ },
+ {
+  "player": "Karun Nair",
+  "team": "Karnataka",
+  "matchId": "ap-kar",
+  "group": "B",
+  "feat": "145+",
+  "kind": "Batting",
+  "note": "Second-innings hundred turned a 144-run deficit into a declaration",
+  "rank": 7
+ },
+ {
+  "rank": 8,
+  "player": "Vihaan Malhotra",
+  "team": "Punjab",
+  "matchId": "pun-asm",
+  "feat": "103",
+  "kind": "Batting",
+  "note": "Hundred on first-class debut",
+  "group": "B"
+ },
+ {
+  "rank": 9,
+  "player": "Ravindra Jadeja",
+  "team": "Saurashtra",
+  "matchId": "sau-chh",
+  "feat": "102 & 3-40",
+  "kind": "All-round",
+  "note": "16th first-class hundred",
+  "group": "B"
+ },
+ {
+  "rank": 10,
+  "player": "Shikhar Shetty",
+  "team": "Karnataka",
+  "matchId": "ap-kar",
+  "feat": "6-115",
+  "kind": "Bowling",
+  "note": "Six-for in a 418 total",
+  "group": "B"
+ },
+ {
+  "rank": 11,
+  "player": "Madhav Kaushik",
+  "team": "Uttar Pradesh",
+  "matchId": "bih-up",
+  "feat": "150",
+  "kind": "Batting",
+  "note": "200-plus stand with Rinku Singh (112)",
+  "group": "A"
+ },
+ {
+  "rank": 12,
+  "player": "Abishek Porel",
+  "team": "Bengal",
+  "matchId": "ben-del",
+  "feat": "149",
+  "kind": "Batting",
+  "note": "Rebuilt from 132/6 with Gharami (133)",
+  "group": "C"
+ },
+ {
+  "rank": 13,
+  "player": "Aditya Singh",
+  "team": "Jharkhand",
+  "matchId": "jhk-ker",
+  "feat": "147",
+  "kind": "Batting",
+  "note": "One of three hundreds in 587; Kerala forced to follow on",
+  "group": "C"
+ },
+ {
+  "rank": 14,
+  "player": "Sibsankar Roy",
+  "team": "Assam",
+  "matchId": "pun-asm",
+  "feat": "143*",
+  "kind": "Batting",
+  "note": "Carried Assam to 373",
+  "group": "B"
+ },
+ {
+  "player": "Siddharth Desai",
+  "team": "Gujarat",
+  "matchId": "guj-odi",
+  "group": "C",
+  "feat": "5-36",
+  "kind": "Bowling",
+  "note": "Bowled Odisha out for 161 to seal a 10-wicket win",
+  "rank": 15
+ },
+ {
+  "player": "Utkarsh Singh",
+  "team": "Jharkhand",
+  "matchId": "jhk-ker",
+  "group": "C",
+  "feat": "71 & 5-84",
+  "kind": "All-round",
+  "note": "Player of the match as Jharkhand banked first-innings points",
+  "rank": 16
+ },
+ {
+  "player": "Gourav Choudhury",
+  "team": "Odisha",
+  "matchId": "guj-odi",
+  "group": "C",
+  "feat": "137",
+  "kind": "Batting",
+  "note": "Career-best, in a losing cause",
+  "rank": 17
+ },
+ {
+  "rank": 18,
+  "player": "Umesh Yadav",
+  "team": "Punjab",
+  "matchId": "pun-asm",
+  "feat": "5-70",
+  "kind": "Bowling",
+  "note": "Aged 38, on Punjab debut; Punjab went on to 478/6d",
+  "group": "B"
+ },
+ {
+  "player": "Yash Rathod",
+  "team": "Vidarbha",
+  "matchId": "vid-pud",
+  "group": "A",
+  "feat": "134",
+  "kind": "Batting",
+  "note": "Second hundred in Vidarbha's 428",
+  "rank": 19
+ },
+ {
+  "rank": 20,
+  "player": "KL Rahul",
+  "team": "Karnataka",
+  "matchId": "ap-kar",
+  "feat": "4 & 1",
+  "kind": "India watch",
+  "note": "Nine days before the NZ tour",
+  "group": "B"
+ },
+ {
+  "rank": 21,
+  "player": "Yashasvi Jaiswal",
+  "team": "Mumbai",
+  "matchId": "mum-chd",
+  "feat": "0",
+  "kind": "India watch",
+  "note": "13-ball duck",
+  "group": "D"
+ },
+ {
+  "rank": 22,
+  "player": "Mohammed Shami",
+  "team": "Bengal",
+  "matchId": "ben-del",
+  "feat": "4-30",
+  "kind": "India watch",
+  "note": "Eight maidens in his first 12 overs",
+  "group": "C"
+ },
+ {
+  "rank": 23,
+  "player": "Anshul Kamboj",
+  "team": "Haryana",
+  "matchId": "har-hp",
+  "feat": "4-56",
+  "kind": "India watch",
+  "note": "Set up Haryana's 7-wicket win",
+  "group": "D"
+ },
+ {
+  "player": "Avesh Khan",
+  "team": "Madhya Pradesh",
+  "matchId": "jk-mp",
+  "group": "A",
+  "feat": "3-16",
+  "kind": "India watch",
+  "note": "Ripped through J&K's top order in the 326 chase",
+  "rank": 24
+ },
+ {
+  "rank": 25,
+  "player": "Rohit Sharma",
+  "team": "Jammu & Kashmir",
+  "matchId": "jk-mp",
+  "feat": "5-36",
+  "kind": "Bowling",
+  "note": "Bowled MP out for 196 on day one",
+  "group": "A"
+ },
+ {
+  "rank": 26,
+  "player": "Mahesh Pithiya",
+  "team": "Baroda",
+  "matchId": "goa-bar",
+  "feat": "5-58",
+  "kind": "Bowling",
+  "note": "Forced the follow-on",
+  "group": "A"
+ },
+ {
+  "rank": 27,
+  "player": "Kukna Ajay Singh",
+  "team": "Rajasthan",
+  "matchId": "raj-tn",
+  "feat": "5-51",
+  "kind": "Bowling",
+  "note": "Earned an 89-run lead; Rajasthan have set TN 282",
+  "group": "D"
+ },
+ {
+  "rank": 28,
+  "player": "Akash Vasisht",
+  "team": "Himachal Pradesh",
+  "matchId": "har-hp",
+  "feat": "113*",
+  "kind": "Batting",
+  "note": "Unbeaten hundred in a losing cause",
+  "group": "D"
+ },
+ {
+  "rank": 29,
+  "player": "Karan Lamba",
+  "team": "Rajasthan",
+  "matchId": "raj-tn",
+  "feat": "113",
+  "kind": "Batting",
+  "note": "Top score in Jaipur",
+  "group": "D"
+ },
+ {
+  "rank": 30,
+  "player": "Vivek Singh",
+  "team": "Railways",
+  "matchId": "rly-utk",
+  "feat": "112",
+  "kind": "Batting",
+  "note": "Hundred in a total of 278",
+  "group": "D"
+ },
+ {
+  "rank": 31,
+  "player": "Saurabh Rawat",
+  "team": "Uttarakhand",
+  "matchId": "rly-utk",
+  "feat": "107",
+  "kind": "Batting",
+  "note": "Set up a 192-run lead",
+  "group": "D"
+ },
+ {
+  "rank": 32,
+  "player": "Hitesh Walunj",
+  "team": "Maharashtra",
+  "matchId": "ser-mah",
+  "feat": "5-51",
+  "kind": "Bowling",
+  "note": "Gave Maharashtra a 106-run lead",
+  "group": "C"
+ },
+ {
+  "rank": 33,
+  "player": "Jaskirat Singh",
+  "team": "Meghalaya",
+  "matchId": "sik-meg",
+  "feat": "127",
+  "kind": "Batting",
+  "note": "Plate",
+  "group": "Plate"
+ },
+ {
+  "rank": 34,
+  "player": "Shubham Sharma",
+  "team": "Madhya Pradesh",
+  "matchId": "jk-mp",
+  "feat": "79 & second-innings top score",
+  "kind": "Batting",
+  "note": "Top-scored in both MP innings in Srinagar",
+  "group": "A"
+ },
+ {
+  "rank": 35,
+  "player": "Rinku Singh",
+  "team": "Uttar Pradesh",
+  "matchId": "bih-up",
+  "feat": "112",
+  "kind": "Batting",
+  "note": "Batting at five; 200-plus stand with Kaushik",
+  "group": "A"
+ }
+]

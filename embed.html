@@ -1,0 +1,415 @@
+<!-- Cricket By JB · Ranji Trophy live desk (paste into an Elementor HTML widget) -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+.rx-site { all: initial; display: block; }
+.rx-site, .rx-site * { box-sizing: border-box; }
+.rx-site .rx {
+  --color-fg: #16201b; --color-fg-muted: #5f6b65; --color-bg: #fbfaf6; --color-panel: #ffffff;
+  --color-border-line: #e4e1d8; --color-ok: #1f7a4d; --color-warn: #b26a00; --color-bad: #c0392b;
+  --font-anthropic-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-anthropic-serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --cds-font-size-caption: .78rem; --cds-font-size-body: .95rem; --cds-font-size-heading: 1.08rem; --cds-font-size-title: 1.6rem;
+  --cds-font-weight-medium: 600; --cds-radius: 8px;
+  --cds-gap-xs: .25rem; --cds-gap-sm: .5rem; --cds-gap-md: 1rem; --cds-gap-lg: 1.5rem; --cds-gap-xl: 2.25rem;
+  --cds-pad-xs: .25rem; --cds-pad-sm: .5rem; --cds-pad-md: 1rem; --cds-pad-lg: 1.25rem; --cds-pad-xl: 2rem;
+  --cds-dur-slow: .3s; --cds-ease-out: cubic-bezier(.2,.7,.2,1);
+  background: var(--color-bg); line-height: 1.5; -webkit-font-smoothing: antialiased; border-radius: 16px;
+}
+.rx-site .rx h1, .rx-site .rx h2, .rx-site .rx h3, .rx-site .rx p, .rx-site .rx ul, .rx-site .rx ol { color: inherit; text-transform: none; }
+.rx-site .rx button { background-image: none; text-transform: none; letter-spacing: normal; box-shadow: none; line-height: inherit; min-height: 0; }
+.rx-site .rx a { box-shadow: none; }
+.rx-site .dash-skeleton { color: transparent !important; background: linear-gradient(90deg, #eee 25%, #f6f6f6 50%, #eee 75%); background-size: 200% 100%; border-radius: 6px; animation: rx-shim 1.4s infinite; min-height: 1.2em; }
+@keyframes rx-shim { to { background-position: -200% 0; } }
+.rx-foot { font-size: .78rem; color: var(--color-fg-muted); border-top: 1px solid var(--color-border-line); padding-top: 1rem; }
+
+.rx-site .rx { --rx-accent: var(--color-fg); --rx-line: var(--color-border-line); font-family: var(--font-anthropic-sans); color: var(--color-fg); font-size: var(--cds-font-size-body); }
+.rx-site .rx-wrap { max-width: 76rem; margin-inline: auto; padding: clamp(1.25rem, 4vw, 3rem) clamp(1rem, 4vw, 2.5rem) clamp(2rem, 5vw, 4rem); display: flex; flex-direction: column; gap: clamp(1.75rem, 3.5vw, 2.75rem); }
+.rx-site .rx button { font: inherit; color: inherit; }
+.rx-site /* masthead */
+.rx-mast { display: flex; flex-direction: column; gap: var(--cds-gap-md); }
+.rx-site .rx-kick { display: flex; align-items: center; gap: var(--cds-gap-md); flex-wrap: wrap; font-size: var(--cds-font-size-caption); letter-spacing: .1em; text-transform: uppercase; color: var(--color-fg-muted); }
+.rx-site .rx-live { display: inline-flex; align-items: center; gap: .45rem; color: var(--rx-accent); font-weight: var(--cds-font-weight-medium); }
+.rx-site .rx-live::before { content: ""; width: .5rem; height: .5rem; border-radius: 50%; background: currentColor; }
+@media (prefers-reduced-motion: no-preference) {
+.rx-site .rx-live::before { animation: rx-ping 2.4s var(--cds-ease-out) infinite; } }
+@keyframes rx-ping { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, currentColor 55%, transparent); } 80%, 100% { box-shadow: 0 0 0 .5rem transparent; } }
+.rx-site .rx-title { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: clamp(2.2rem, 6vw, 4.2rem); line-height: 1; letter-spacing: -.02em; margin: 0; }
+.rx-site .rx-title em { font-style: italic; color: var(--color-fg-muted); }
+.rx-site .rx-take { margin: 0; max-width: 46rem; font-family: var(--font-anthropic-serif); font-size: clamp(1.1rem, 2vw, 1.35rem); line-height: 1.45; }
+.rx-site .rx-facts { display: flex; gap: clamp(1.5rem, 5vw, 3.5rem); flex-wrap: wrap; align-items: flex-end; padding-top: var(--cds-gap-sm); }
+.rx-site .rx .rx-fact b { display: block; font-family: var(--font-anthropic-serif); font-weight: 400; font-size: clamp(1.8rem, 3.5vw, 2.6rem); line-height: 1; font-variant-numeric: tabular-nums; }
+.rx-site .rx-fact span { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.rx-site .rx-upd { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin-left: auto; }
+.rx-site .rx-upd.rx-stale { color: var(--color-warn); }
+.rx-site /* tabs */
+.rx-tabs { display: flex; gap: var(--cds-gap-lg); border-bottom: 1px solid var(--rx-line); overflow-x: auto; scrollbar-width: none; }
+.rx-site .rx-tabs button { background: none; border: 0; border-bottom: 2px solid transparent; padding: 0 0 .7rem; margin-bottom: -1px; cursor: pointer; white-space: nowrap; color: var(--color-fg-muted); font-size: var(--cds-font-size-body); }
+.rx-site .rx-tabs button:hover { color: var(--color-fg); }
+.rx-site .rx-tabs button[aria-pressed="true"] { color: var(--color-fg); border-bottom-color: var(--color-fg); }
+.rx-site .rx-tabs button small { margin-left: .35rem; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); font-variant-numeric: tabular-nums; }
+.rx-site /* section heads */
+.rx-sh { display: flex; justify-content: space-between; align-items: baseline; gap: var(--cds-gap-md); margin-bottom: var(--cds-gap-md); }
+.rx-site .rx-sh h2 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: clamp(1.4rem, 2.6vw, 1.85rem); margin: 0; }
+.rx-site .rx-sh span,.rx-site .rx-link { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.rx-site .rx-link { background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.rx-site /* team badge */
+.rx-badge { --h: 210; flex: 0 0 auto; width: 2.4rem; height: 2.4rem; border-radius: 50%; display: inline-grid; place-items: center; font-size: .68rem; font-weight: 600; letter-spacing: .04em; color: #fff; background: radial-gradient(circle at 30% 25%, hsl(var(--h) 62% 58%), hsl(var(--h) 58% 34%)); box-shadow: inset 0 0 0 2px hsl(var(--h) 60% 70% / .35), 0 1px 2px rgb(0 0 0 / .15); }
+.rx-site .rx-badge.rx-sm { width: 1.9rem; height: 1.9rem; font-size: .58rem; }
+.rx-site .rx-badge.rx-lg { width: 3.4rem; height: 3.4rem; font-size: .85rem; }
+.rx-site /* standouts strip */
+.rx-strip { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(13.5rem, 1fr); gap: var(--cds-gap-md); overflow-x: auto; padding-bottom: 6px; scrollbar-width: thin; min-height: 9rem; }
+.rx-site .rx-star { display: flex; flex-direction: column; gap: .5rem; text-align: left; padding: var(--cds-pad-lg); border: 1px solid var(--rx-line); border-radius: calc(var(--cds-radius) * 2); background: var(--color-panel); cursor: pointer; transition: border-color var(--cds-dur-slow); }
+.rx-site .rx-star:hover { border-color: var(--color-fg-muted); }
+.rx-site .rx-star-top { display: flex; justify-content: space-between; align-items: center; }
+.rx-site .rx-star-rank { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); text-transform: uppercase; letter-spacing: .08em; }
+.rx-site .rx-star-feat { font-family: var(--font-anthropic-serif); font-size: clamp(1.8rem, 3vw, 2.3rem); line-height: 1; font-variant-numeric: tabular-nums; }
+.rx-site .rx .rx-star-name { font-weight: var(--cds-font-weight-medium); }
+.rx-site .rx-star-note { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); line-height: 1.45; }
+.rx-site .rx-star-tag { font-size: .68rem; text-transform: uppercase; letter-spacing: .07em; color: var(--color-fg-muted); }
+.rx-site .rx-star.rx-india .rx-star-tag { color: var(--rx-accent); }
+.rx-site /* match cards */
+.rx-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 21rem), 1fr)); gap: var(--cds-gap-lg); min-height: 16rem; }
+.rx-site .rx-card { display: flex; flex-direction: column; gap: var(--cds-gap-md); text-align: left; width: 100%; padding: var(--cds-pad-lg) var(--cds-pad-lg) var(--cds-pad-md); border: 1px solid var(--rx-line); border-radius: calc(var(--cds-radius) * 2); background: var(--color-panel); cursor: pointer; transition: border-color var(--cds-dur-slow), box-shadow var(--cds-dur-slow); }
+.rx-site .rx-card:hover,.rx-site .rx-card:focus-visible { border-color: var(--color-fg-muted); box-shadow: 0 6px 24px -12px rgb(0 0 0 / .25); outline: none; }
+.rx-site .rx-cmeta { display: flex; justify-content: space-between; align-items: center; gap: var(--cds-gap-sm); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.rx-site .rx-state { display: inline-flex; align-items: center; gap: .4rem; white-space: nowrap; }
+.rx-site .rx-state i { width: .45rem; height: .45rem; border-radius: 50%; background: var(--color-fg-muted); }
+.rx-site .rx-state.rx-s-hot { color: var(--color-fg); }
+.rx-site .rx-s-hot i { background: var(--rx-accent); }
+.rx-site .rx-state.rx-s-tight { color: var(--color-warn); }
+.rx-site .rx-s-tight i { background: var(--color-warn); }
+.rx-site .rx-state.rx-s-done { color: var(--color-ok); }
+.rx-site .rx-s-done i { background: var(--color-ok); }
+.rx-site .rx-teams { display: flex; flex-direction: column; gap: .7rem; }
+.rx-site .rx-team { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: .75rem; }
+.rx-site .rx-tname { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: var(--cds-font-size-heading); }
+.rx-site .rx-tname small { display: block; font-size: var(--cds-font-size-caption); color: var(--rx-accent); }
+.rx-site .rx-score { font-family: var(--font-anthropic-serif); font-size: clamp(1.25rem, 2vw, 1.5rem); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.rx-site .rx-csit { font-size: var(--cds-font-size-body); line-height: 1.45; padding-top: var(--cds-gap-sm); border-top: 1px solid var(--rx-line); }
+.rx-site .rx-card.rx-done .rx-csit { color: var(--color-ok); }
+.rx-site .rx-empty { color: var(--color-fg-muted); padding: var(--cds-pad-lg) 0; }
+.rx-site /* detail */
+.rx-detail { display: flex; flex-direction: column; gap: var(--cds-gap-lg); min-height: 22rem; }
+.rx-site .rx-dbar { display: flex; justify-content: space-between; align-items: center; gap: var(--cds-gap-sm); flex-wrap: wrap; }
+.rx-site .rx-nav { background: none; border: 1px solid var(--rx-line); border-radius: 999px; padding: .35rem .95rem; cursor: pointer; }
+.rx-site .rx-nav:hover { border-color: var(--color-fg-muted); }
+.rx-site .rx-nav[disabled] { opacity: .4; cursor: default; }
+.rx-site .rx-steps { display: flex; gap: var(--cds-gap-sm); }
+.rx-site .rx-hero { display: flex; flex-direction: column; gap: var(--cds-gap-lg); padding: clamp(1.25rem, 3vw, 2.25rem); border-radius: calc(var(--cds-radius) * 3); border: 1px solid var(--rx-line); background: linear-gradient(150deg, color-mix(in srgb, var(--rx-accent) 12%, var(--color-panel)) 0%, var(--color-panel) 65%); }
+.rx-site .rx-hero .rx-teams { gap: var(--cds-gap-md); }
+.rx-site .rx-hero .rx-tname { font-family: var(--font-anthropic-serif); font-size: clamp(1.4rem, 3vw, 2.1rem); }
+.rx-site .rx-hero .rx-score { font-size: clamp(1.6rem, 3.6vw, 2.6rem); }
+.rx-site .rx-hsit { font-family: var(--font-anthropic-serif); font-size: clamp(1.1rem, 2vw, 1.35rem); }
+.rx-site .rx-actions { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm); align-items: center; }
+.rx-site .rx-btn { display: inline-flex; align-items: center; gap: .4rem; background: var(--color-fg); color: var(--color-bg); border: 1px solid var(--color-fg); border-radius: 999px; padding: .45rem 1.1rem; text-decoration: none; cursor: pointer; }
+.rx-site .rx-btn.rx-ghost { background: transparent; color: var(--color-fg); border-color: var(--rx-line); }
+.rx-site .rx-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: clamp(1.5rem, 3vw, 2.5rem); }
+.rx-site .rx-h3 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: clamp(1.2rem, 2vw, 1.45rem); margin: 0 0 var(--cds-gap-md); }
+.rx-site .rx-summary { margin: 0 0 var(--cds-gap-md); padding-left: var(--cds-pad-md); border-left: 3px solid var(--rx-accent); font-family: var(--font-anthropic-serif); font-size: var(--cds-font-size-heading); line-height: 1.55; }
+.rx-site .rx-ins { margin: 0; padding-left: 1.1rem; line-height: 1.6; }
+.rx-site .rx-ins li { margin-bottom: .4rem; }
+.rx-site .rx-inns { display: flex; flex-direction: column; }
+.rx-site .rx-inn { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: .5rem .9rem; align-items: start; padding: var(--cds-pad-md) 0; border-top: 1px solid var(--rx-line); }
+.rx-site .rx-inn:first-child { border-top: 0; padding-top: 0; }
+.rx-site .rx-inn-n { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); text-transform: uppercase; letter-spacing: .06em; }
+.rx-site .rx .rx-inn-t { font-weight: var(--cds-font-weight-medium); }
+.rx-site .rx-inn-tot { font-family: var(--font-anthropic-serif); font-size: var(--cds-font-size-heading); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.rx-site .rx-inn-p { grid-column: 2 / -1; font-size: var(--cds-font-size-caption); line-height: 1.6; color: var(--color-fg-muted); }
+.rx-site .rx .rx-inn-p b { color: var(--color-fg); font-weight: var(--cds-font-weight-medium); }
+.rx-site .rx-gap { height: var(--cds-gap-lg); }
+.rx-site .rx-muted { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+.rx-site .rx-fail { display: flex; align-items: center; justify-content: center; gap: var(--cds-gap-xs); color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); min-height: 8rem; grid-column: 1 / -1; }
+.rx-site .rx-fail::before { content: ""; width: .375rem; height: .375rem; border-radius: 50%; background: var(--color-bad); }
+[data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
+.rx-site [hidden] { display: none !important; }
+</style>
+<div class="rx-site"><div class="rx">
+  <div class="rx-wrap">
+    <header class="rx-mast" id="top">
+      <div class="rx-kick"><span class="rx-live">Live</span><span>Cricket By JB</span><span><span data-source="round" data-field="round" data-row="0">—</span> · <span data-source="round" data-field="dates" data-row="0">—</span></span></div>
+      <h1 class="rx-title">Ranji Trophy <em>live desk</em></h1>
+      <p class="rx-take dash-skeleton" id="takeaway" data-source="groups" data-field="headline" data-where="group=All">—</p>
+      <div class="rx-facts">
+        <div class="rx-fact"><b data-source="round" data-field="day" data-row="0">—</b><span>of the round</span></div>
+        <div class="rx-fact"><b data-source="round" data-field="live" data-row="0">—</b><span>games still on</span></div>
+        <div class="rx-fact"><b data-source="round" data-field="finished" data-row="0">—</b><span>results in</span></div>
+        <div class="rx-upd" id="upd">Updated <span class="rx-asof" data-source="round" data-field="asOf" data-row="0">—</span></div>
+      </div>
+    </header>
+
+    <nav class="rx-tabs" id="tabs" aria-label="Filter games"></nav>
+
+    <div id="list-view" class="rx-wrap" style="padding:0;gap:clamp(1.75rem,3.5vw,2.75rem)">
+      <section id="standouts">
+        <div class="rx-sh"><h2 id="stand-h">Players of the round</h2><button class="rx-link" id="stand-more" hidden></button></div>
+        <div class="rx-strip" id="stand-strip" data-source="standouts"></div>
+      </section>
+      <section id="games">
+        <div class="rx-sh"><h2 id="games-h">All games</h2><span id="games-n"></span></div>
+        <div class="rx-grid" id="grid" data-source="matches"></div>
+      </section>
+    </div>
+
+    <section class="rx-detail" id="game" data-source="matches innings standouts" hidden></section>
+    <footer class="rx-foot">Scores and notes compiled hourly by Cricket By JB from Wisden, CricketWinner and ESPNcricinfo match reports. Full scorecards open on ESPNcricinfo.</footer>
+  </div>
+</div>
+</div>
+<script>
+{
+  // ===== Data source: edit DATA_BASE if the repo moves =====
+  const DATA_BASE = 'https://raw.githubusercontent.com/__OWNER__/ranji-live/main/data/';
+  const IDS = ['matches', 'standouts', 'innings', 'groups', 'round'];
+  const SEED = {"matches":[{"id":"bih-up","group":"A","teamA":"Uttar Pradesh","teamB":"Bihar","venue":"Rajgir","status":"Result","state":"Finished","scoreA":"540","scoreB":"141 & 132","situation":"UP won by an innings and 267 runs","firstInningsLead":"Uttar Pradesh","notes":"Madhav Kaushik (150) and Rinku Singh (112) added a 200-plus stand from 3 down on day one | Bihar were bowled out twice inside 4 sessions | Zeeshan Ansari 4-40 finished it after the follow-on","result":"UP won by an innings and 267 runs","endSummary":"Uttar Pradesh opened their season with the most lopsided result of the round, beating Bihar by an innings and 267 runs in Rajgir. Madhav Kaushik's 150 and a Rinku Singh hundred built 540, and Bihar never got within 400 — bowled out for 141 and 132, with Kartik Yadav and Zeeshan Ansari taking four apiece.","updated":"2026-10-14T10:40:00+05:30","scorecardUrl":"https://www.espncricinfo.com/series/ranji-trophy-2026-27-1546521/bihar-vs-uttar-pradesh-elite-group-a-1546525/full-scorecard","scorecardExact":true},{"id":"goa-bar","group":"A","teamA":"Baroda","teamB":"Goa","venue":"Panaji","status":"Result","state":"Finished","scoreA":"472/8d","scoreB":"199 & 138 (f/o)","situation":"Baroda won by an innings and 135 runs","firstInningsLead":"Baroda","notes":"Goa lost their last six follow-on wickets for 20 on the final day | Baroda's top six all got starts; Atit Sheth fell one short of a hundred (99) | Mahesh Pithiya 5-58 and Bhargav Bhatt 4-51 shared nine of ten in the first innings","result":"Baroda won by an innings and 135 runs","endSummary":"Baroda converted a 273-run first-innings lead into an innings-and-135-run win in Panaji, rolling Goa over for 138 in the follow-on on the final day. A deep batting card, led by Atit Sheth's 99 and Mitesh Patel's 81, set up 472 for 8, and Mahesh Pithiya's 5 for 58 and Bhargav Bhatt's 4 for 51 did the rest.","updated":"2026-10-14T15:20:00+05:30","scorecardUrl":"https://www.espncricinfo.com/series/ranji-trophy-2026-27-1546521/goa-vs-baroda-elite-group-a-1546524/full-scorecard","scorecardExact":true},{"id":"vid-pud","group":"A","teamA":"Vidarbha","teamB":"Puducherry","venue":"Nagpur","status":"Day 4","state":"Outright possible","scoreA":"428 & 175/3d","scoreB":"313 & 18/2","situation":"Puducherry need 273 more, 8 wickets left","firstInningsLead":"Vidarbha","notes":"Akshay Wadkar's 198 is the top score of the round | Vidarbha added 175 in 36 overs before declaring | Puducherry two down inside eight overs of a 291 chase | Ritesh Gudge's 95 had kept Puducherry within 115","result":"","endSummary":"","updated":"2026-10-14T13:12:00+05:30","scorecardUrl":"https://www.espncricinfo.com/series/ranji-trophy-2026-27-1546521/vidarbha-vs-puducherry-elite-group-a-1546527/full-scorecard","scorecardExact":true},{"id":"jk-mp","group":"A","teamA":"Madhya Pradesh","teamB":"Jammu & Kashmir","venue":"Srinagar","status":"Bad light, Day 4","state":"Outright possible","scoreA":"196 & 249/6d","scoreB":"120 & 61/6","situation":"J&K need 265 more, 4 wickets left; bad light has stopped play","firstInningsLead":"Madhya Pradesh","notes":"Avesh Khan 3-16 and Aryan Pandey 3-29 have J&K six down in 28 overs | Kanhaiya Wadhawan retired hurt on 26 | MP declared at 249/6 after a 76-run first-innings lead | Champions J&K were bowled out for 120 at home in the first innings","result":"","endSummary":"","updated":"2026-10-14T16:15:00+05:30","scorecardUrl":"https://www.espncricinfo.com/series/ranji-trophy-2026-27-1546521/jammu-kashmir-vs-madhya-pradesh-elite-group-a-1546526/full-scorecard","scorecardExact":true},{"id":"pun-asm","group":"B","teamA":"Assam","teamB":"Punjab","venue":"New Chandigarh","status":"Day 4","state":"Lead secured","scoreA":"373 & 49/3","scoreB":"478/6d","situation":"Assam trail by 56, 7 wickets left","firstInningsLead":"Punjab","notes":"Assam three down and still 56 behind on the final day | Punjab declared at 478/6, a 105-run first-innings lead | Vihaan Malhotra made 103 on first-class debut | Umesh Yadav, 38, took 5-70 on Punjab debut","result":"","endSummary":"","updated":"2026-10-14T15:20:00+05:30","scorecardUrl":"https://www.espncricinfo.com/series/ranji-trophy-2026-27-1546521/punjab-vs-assam-elite-group-b-1546530/full-scorecard","scorecardExact":true},{"id":"sau-chh","group":"B","teamA":"Saurashtra","teamB":"Chhattisgarh","venue":"Rajkot","status":"Day 4","state":"Lead secured","scoreA":"392 & 229/1","scoreB":"312","situation":"Saurashtra lead by 309, 9 wickets left","firstInningsLead":"Saurashtra","notes":"Saurashtra 229/1 — batting the game out with a 309-run lead | Jadeja: 102 and 3-40 in his Test-prep game | Prerak Mankad 129 anchored the first innings","result":"","endSummary":"","updated":"2026-10-14T15:20:00+05:30","scorecardUrl":"https://www.espncricinfo.com/series/ranji-trophy-2026-27-1546521/saurashtra-vs-chhattisgarh-elite-group-b-1546531/full-scorecard","scorecardExact":true},{"id":"ap-kar","group":"B","teamA":"Andhra","teamB":"Karnataka","venue":"Vijayawada","status":"Day 4","state":"Outright possible","scoreA":"418 & 55/4","scoreB":"274 & 337/9d","situation":"Andhra need 139 more, 6 wickets left","firstInningsLead":"Andhra","notes":"Karnataka declared at 337/9 and set Andhra 194 | Andhra 55/4 after 27 overs — Karnataka pushing for an unlikely win | Karun Nair's second-innings hundred turned a 144-run deficit around | KL Rahul: 4 and 1","result":"","endSummary":"","updated":"2026-10-14T16:15:00+05:30","scorecardUrl":"https://www.espncricinfo.com/series/ranji-trophy-2026-27-1546521/andhra-vs-karnataka-elite-group-b-1546529/full-scorecard","scorecardExact":true},{"id":"hyd-tri","group":"B","teamA":"Hyderabad","teamB":"Tripura","venue":"Secunderabad","status":"Result","state":"Finished","scoreA":"294","scoreB":"134 & 120","situation":"Hyderabad won by an innings and 40 runs","firstInningsLead":"Hyderabad","notes":"Tripura offspinner Sandip Sarkar took 8-96 in only his fourth first-class game — in a losing cause | Tanay Thyagarajan: 9 wickets in the match, 6-52 in the second | Siraj went wicketless in the first innings","result":"Hyderabad won by an innings and 40 runs","endSummary":"Hyderabad beat Tripura by an innings and 40 runs, but the performance of the match came from the losing side: Tripura offspinner Sandip Sarkar took 8 for 96 in just his fourth first-class game. Left-arm spinner Tanay Thyagarajan's nine-wicket match, including 6 for 52 second time around, decided it.","updated":"2026-10-14T10:40:00+05:30","scorecardUrl":"https://www.espncricinfo.com/series/ranji-trophy-2026-27-1546521/hyderabad-india-vs-tripura-elite-group-b-1546528/full-scorecard","scorecardExact":true},{"id":"guj-odi","group":"C","teamA":"Odisha","teamB":"Gujarat","venue":"Ahmedabad","status":"Result","state":"Finished","scoreA":"324 & 161","scoreB":"439 & 47/0","situation":"Gujarat won by 10 wickets","firstInningsLead":"Gujarat","notes":"Siddharth Desai 5-36 bowled Odisha out for 161 on the final day | Gujarat knocked off 47 without loss | Vedant Trivedi 108 and Aarya Desai 94 built a 115-run first-innings lead | Gourav Choudhury's career-best 137 in vain","result":"Gujarat won by 10 wickets","endSummary":"Gujarat turned a 115-run first-innings lead into a 10-wicket win in Ahmedabad, the round's only outright result decided on the last day in Group C. Vedant Trivedi's 108 and Aarya Desai's 94 overhauled Gourav Choudhury's career-best 137, then Siddharth Desai's 5 for 36 bowled Odisha out for 161 and left a target of just 47.","updated":"2026-10-14T12:11:00+05:30","scorecardUrl":"https://www.espncricinfo.com/series/ranji-trophy-2026-27-1546521/gujarat-vs-odisha-elite-group-c-1546533/full-scorecard","scorecardExact":true},{"id":"ben-del","group":"C","teamA":"Bengal","teamB":"Delhi","venue":"Kalyani","status":"Day 4","state":"Outright possible","scoreA":"429","scoreB":"240 & 261/9 (f/o)","situation":"Delhi lead by 72, 1 wicket left","firstInningsLead":"Bengal","notes":"Following on 189 behind, Delhi batted past 100 overs and into a 72-run lead | Bengal need the last wicket and then a short chase against the clock | Ayush Badoni's 5-43 and 77-plus in the second innings | Abishek Porel 149 and Sudip Gharami 133 rebuilt Bengal from 132/6","result":"","endSummary":"","updated":"2026-10-14T16:15:00+05:30","scorecardUrl":"https://www.espncricinfo.com/series/ranji-trophy-2026-27-1546521/bengal-vs-delhi-elite-group-c-1546534/full-scorecard","scorecardExact":true},{"id":"jhk-ker","group":"C","teamA":"Jharkhand","teamB":"Kerala","venue":"Jamshedpur","status":"Result","state":"Finished","scoreA":"587","scoreB":"395 & 62/2 (f/o)","situation":"Match drawn; Jharkhand took the first-innings lead","firstInningsLead":"Jharkhand","notes":"Kerala finished 62/2 in the follow-on, still 130 behind | Jharkhand's 587 had three hundreds: Aditya Singh 147, Shikhar Mohan 143, Virat Singh 108 | Utkarsh Singh (71 & 5-84) was player of the match | Abhishek P Nair 126 the lone first-innings resistance","result":"Match drawn — Jharkhand took first-innings lead","endSummary":"Jharkhand banked first-innings points in Jamshedpur on the back of a 587 that carried three hundreds, Aditya Singh's 147 and Shikhar Mohan's 143 leading the way. Utkarsh Singh's 71 and five wickets made him player of the match, and Kerala, forced to follow on despite Abhishek P Nair's 126, batted out the last day at 62 for 2.","updated":"2026-10-14T16:15:00+05:30","scorecardUrl":"https://www.espncricinfo.com/series/ranji-trophy-2026-27-1546521/match-schedule-fixtures-and-results","scorecardExact":false},{"id":"ser-mah","group":"C","teamA":"Maharashtra","teamB":"Services","venue":"Delhi (Palam)","status":"Tea, Day 4","state":"In the balance","scoreA":"333 & 141","scoreB":"227 & 111/6","situation":"Services need 137 more, 4 wickets left","firstInningsLead":"Maharashtra","notes":"Vicky Ostwal 3-48 has Services six down at tea in a 248 chase | Nakul Sharma 32 keeping Services alive | Arjun Sharma 5-58 in the second innings — 9 wickets in the match | Ankit Bawne 118 in the first innings","result":"","endSummary":"","updated":"2026-10-14T16:15:00+05:30","scorecardUrl":"https://www.espncricinfo.com/series/ranji-trophy-2026-27-1546521/services-vs-maharashtra-elite-group-c-1546535/full-scorecard","scorecardExact":true},{"id":"mum-chd","group":"D","teamA":"Mumbai","teamB":"Chandigarh","venue":"Wankhede","status":"Result","state":"Finished","scoreA":"429","scoreB":"78 & 196 (f/o)","situation":"Mumbai won by an innings and 155 runs","firstInningsLead":"Mumbai","notes":"Tushar Deshpande 5-17 with a hat-trick (five in 16 balls) | Jaiswal 0, Sarfaraz 1 — the lower order made the runs | Kotian 58 & 3-30","result":"Mumbai won by an innings and 155 runs","endSummary":"Mumbai crushed Chandigarh by an innings and 155 runs at the Wankhede despite Yashasvi Jaiswal and Sarfaraz Khan managing one run between them. Siddhesh Lad (86) and the lower order built 429, then Tushar Deshpande ripped through Chandigarh with 5 for 17, including a hat-trick, to bowl them out for 78.","updated":"2026-10-14T10:40:00+05:30","scorecardUrl":"https://www.espncricinfo.com/series/ranji-trophy-2026-27-1546521/mumbai-vs-chandigarh-elite-group-d-1546539/full-scorecard","scorecardExact":true},{"id":"raj-tn","group":"D","teamA":"Rajasthan","teamB":"Tamil Nadu","venue":"Jaipur","status":"Day 4","state":"Outright possible","scoreA":"363 & 192/6d","scoreB":"274 & 73/0","situation":"Tamil Nadu need 209 more, 10 wickets left","firstInningsLead":"Rajasthan","notes":"Tamil Nadu openers 73/0 without loss chasing 282 | Rajasthan declared at 192/6 to set the target | Kukna Ajay Singh 5-51 had secured an 89-run lead | Karan Lamba 113, Rohan Rajbhar 95","result":"","endSummary":"","updated":"2026-10-14T15:20:00+05:30","scorecardUrl":"https://www.espncricinfo.com/series/ranji-trophy-2026-27-1546521/rajasthan-vs-tamil-nadu-elite-group-d-1546538/full-scorecard","scorecardExact":true},{"id":"har-hp","group":"D","teamA":"Haryana","teamB":"Himachal Pradesh","venue":"Rohtak","status":"Result","state":"Finished","scoreA":"296 & 74/3","scoreB":"253 & 113","situation":"Haryana won by 7 wickets","firstInningsLead":"Haryana","notes":"Chased 71 for the loss of only three on the final morning | HP collapsed for 113 second time around after a 43-run first-innings deficit | Akash Vasisht 113* carried HP's first innings; Anshul Kamboj took four","result":"Haryana won by 7 wickets","endSummary":"Haryana closed out a 7-wicket win in Rohtak, knocking off a target of 71 on the final morning. The game turned on Himachal's second-innings collapse to 113, with Parth Vats taking 3 for 22, after Anshul Kamboj's 4 for 56 had already wiped out the value of Akash Vasisht's unbeaten 113. It's the only Elite result so far not won by an innings.","updated":"2026-10-14T11:11:00+05:30","scorecardUrl":"https://www.espncricinfo.com/series/ranji-trophy-2026-27-1546521/haryana-vs-himachal-pradesh-elite-group-d-1546536/full-scorecard","scorecardExact":true},{"id":"rly-utk","group":"D","teamA":"Railways","teamB":"Uttarakhand","venue":"Brabourne","status":"Lunch, Day 4","state":"Lead secured","scoreA":"278 & 156/2","scoreB":"470","situation":"Railways trail by 36, 8 wickets left","firstInningsLead":"Uttarakhand","notes":"Saurabh Rawat 107 built a 192-run lead | Railways 156/2 after 48 overs — a draw is close | Vivek Singh followed his 112 with a second-innings fifty | Devendra Bora 5-49 on day one","result":"","endSummary":"","updated":"2026-10-14T13:12:00+05:30","scorecardUrl":"https://www.espncricinfo.com/series/ranji-trophy-2026-27-1546521/match-schedule-fixtures-and-results","scorecardExact":false},{"id":"sik-meg","group":"Plate","teamA":"Sikkim","teamB":"Meghalaya","venue":"Rangpo","status":"Day 4","state":"Lead secured","scoreA":"245 & 291/7","scoreB":"395","situation":"Sikkim lead by 141, 3 wickets left","firstInningsLead":"Meghalaya","notes":"Sikkim 291/7, 141 ahead with time almost gone | Jaskirat Singh 127 earned Meghalaya a 150-run lead | Parth Palawat 66 led Sikkim's fightback | Ram Gurung 5-32 bowled Sikkim out on day one","result":"","endSummary":"","updated":"2026-10-14T15:20:00+05:30","scorecardUrl":"https://www.espncricinfo.com/series/ranji-trophy-2026-27-1546521/match-schedule-fixtures-and-results","scorecardExact":false},{"id":"miz-man","group":"Plate","teamA":"Mizoram","teamB":"Manipur","venue":"Nadiad","status":"Day 4","state":"In the balance","scoreA":"183 & 295","scoreB":"251 & 185/7","situation":"Manipur need 43 more, 3 wickets left","firstInningsLead":"Manipur","notes":"Manipur have recovered from 84/5 to 185/7 — 43 short of 228 | Kishan Singha 6-52 & 4-88 — 10 wickets in the match | Chinmay Sutar's 99 set the target | Khiangte Vanrotlinga has 3 second-innings wickets","result":"","endSummary":"","updated":"2026-10-14T15:20:00+05:30","scorecardUrl":"https://www.espncricinfo.com/series/ranji-trophy-2026-27-1546521/mizoram-vs-manipur-plate-group-1546540/full-scorecard","scorecardExact":true},{"id":"aru-nag","group":"Plate","teamA":"Nagaland","teamB":"Arunachal Pradesh","venue":"Ahmedabad","status":"Result","state":"Finished","scoreA":"—","scoreB":"—","situation":"Arunachal Pradesh forfeited the match","firstInningsLead":"","notes":"No ball bowled in Ahmedabad | Forfeit stems from a factional dispute in the Arunachal Cricket Association that has reached the courts | Arunachal also missed U-19 and U-23 fixtures this week","result":"Nagaland awarded the match (Arunachal Pradesh forfeit)","endSummary":"Nagaland start their Plate campaign with a result they never had to play for: Arunachal Pradesh forfeited the opener in Ahmedabad. Arunachal's association is split between two rival factions in a court dispute, and the fallout has already cost them fixtures at U-19 and U-23 level this week.","updated":"2026-10-14T11:11:00+05:30","scorecardUrl":"https://www.espncricinfo.com/series/ranji-trophy-2026-27-1546521/match-schedule-fixtures-and-results","scorecardExact":false}],"standouts":[{"rank":1,"player":"Sandip Sarkar","team":"Tripura","matchId":"hyd-tri","feat":"8-96","kind":"Bowling","note":"Fourth first-class game; best figures of the round","group":"B"},{"rank":2,"player":"Kishan Singha","team":"Manipur","matchId":"miz-man","feat":"10 wkts in match","kind":"Bowling","note":"6-52 & 4-88 for Manipur","group":"Plate"},{"rank":3,"player":"Arjun Sharma","team":"Services","matchId":"ser-mah","feat":"9 wkts in match","kind":"Bowling","note":"4-75 & 5-58; Services 111/6 at tea chasing 248","group":"C"},{"rank":4,"player":"Akshay Wadkar","team":"Vidarbha","matchId":"vid-pud","feat":"198","kind":"Batting","note":"Top score of the round","group":"A"},{"rank":5,"player":"Tanay Thyagarajan","team":"Hyderabad","matchId":"hyd-tri","feat":"9 wkts in match","kind":"Bowling","note":"6-52 in the second innings","group":"B"},{"rank":6,"player":"Tushar Deshpande","team":"Mumbai","matchId":"mum-chd","feat":"5-17","kind":"Bowling","note":"Hat-trick; five in 16 balls","group":"D"},{"player":"Karun Nair","team":"Karnataka","matchId":"ap-kar","group":"B","feat":"145+","kind":"Batting","note":"Second-innings hundred turned a 144-run deficit into a declaration","rank":7},{"rank":8,"player":"Vihaan Malhotra","team":"Punjab","matchId":"pun-asm","feat":"103","kind":"Batting","note":"Hundred on first-class debut","group":"B"},{"rank":9,"player":"Ravindra Jadeja","team":"Saurashtra","matchId":"sau-chh","feat":"102 & 3-40","kind":"All-round","note":"16th first-class hundred","group":"B"},{"rank":10,"player":"Shikhar Shetty","team":"Karnataka","matchId":"ap-kar","feat":"6-115","kind":"Bowling","note":"Six-for in a 418 total","group":"B"},{"rank":11,"player":"Madhav Kaushik","team":"Uttar Pradesh","matchId":"bih-up","feat":"150","kind":"Batting","note":"200-plus stand with Rinku Singh (112)","group":"A"},{"rank":12,"player":"Abishek Porel","team":"Bengal","matchId":"ben-del","feat":"149","kind":"Batting","note":"Rebuilt from 132/6 with Gharami (133)","group":"C"},{"rank":13,"player":"Aditya Singh","team":"Jharkhand","matchId":"jhk-ker","feat":"147","kind":"Batting","note":"One of three hundreds in 587; Kerala forced to follow on","group":"C"},{"rank":14,"player":"Sibsankar Roy","team":"Assam","matchId":"pun-asm","feat":"143*","kind":"Batting","note":"Carried Assam to 373","group":"B"},{"player":"Siddharth Desai","team":"Gujarat","matchId":"guj-odi","group":"C","feat":"5-36","kind":"Bowling","note":"Bowled Odisha out for 161 to seal a 10-wicket win","rank":15},{"player":"Utkarsh Singh","team":"Jharkhand","matchId":"jhk-ker","group":"C","feat":"71 & 5-84","kind":"All-round","note":"Player of the match as Jharkhand banked first-innings points","rank":16},{"player":"Gourav Choudhury","team":"Odisha","matchId":"guj-odi","group":"C","feat":"137","kind":"Batting","note":"Career-best, in a losing cause","rank":17},{"rank":18,"player":"Umesh Yadav","team":"Punjab","matchId":"pun-asm","feat":"5-70","kind":"Bowling","note":"Aged 38, on Punjab debut; Punjab went on to 478/6d","group":"B"},{"player":"Yash Rathod","team":"Vidarbha","matchId":"vid-pud","group":"A","feat":"134","kind":"Batting","note":"Second hundred in Vidarbha's 428","rank":19},{"rank":20,"player":"KL Rahul","team":"Karnataka","matchId":"ap-kar","feat":"4 & 1","kind":"India watch","note":"Nine days before the NZ tour","group":"B"},{"rank":21,"player":"Yashasvi Jaiswal","team":"Mumbai","matchId":"mum-chd","feat":"0","kind":"India watch","note":"13-ball duck","group":"D"},{"rank":22,"player":"Mohammed Shami","team":"Bengal","matchId":"ben-del","feat":"4-30","kind":"India watch","note":"Eight maidens in his first 12 overs","group":"C"},{"rank":23,"player":"Anshul Kamboj","team":"Haryana","matchId":"har-hp","feat":"4-56","kind":"India watch","note":"Set up Haryana's 7-wicket win","group":"D"},{"player":"Avesh Khan","team":"Madhya Pradesh","matchId":"jk-mp","group":"A","feat":"3-16","kind":"India watch","note":"Ripped through J&K's top order in the 326 chase","rank":24},{"rank":25,"player":"Rohit Sharma","team":"Jammu & Kashmir","matchId":"jk-mp","feat":"5-36","kind":"Bowling","note":"Bowled MP out for 196 on day one","group":"A"},{"rank":26,"player":"Mahesh Pithiya","team":"Baroda","matchId":"goa-bar","feat":"5-58","kind":"Bowling","note":"Forced the follow-on","group":"A"},{"rank":27,"player":"Kukna Ajay Singh","team":"Rajasthan","matchId":"raj-tn","feat":"5-51","kind":"Bowling","note":"Earned an 89-run lead; Rajasthan have set TN 282","group":"D"},{"rank":28,"player":"Akash Vasisht","team":"Himachal Pradesh","matchId":"har-hp","feat":"113*","kind":"Batting","note":"Unbeaten hundred in a losing cause","group":"D"},{"rank":29,"player":"Karan Lamba","team":"Rajasthan","matchId":"raj-tn","feat":"113","kind":"Batting","note":"Top score in Jaipur","group":"D"},{"rank":30,"player":"Vivek Singh","team":"Railways","matchId":"rly-utk","feat":"112","kind":"Batting","note":"Hundred in a total of 278","group":"D"},{"rank":31,"player":"Saurabh Rawat","team":"Uttarakhand","matchId":"rly-utk","feat":"107","kind":"Batting","note":"Set up a 192-run lead","group":"D"},{"rank":32,"player":"Hitesh Walunj","team":"Maharashtra","matchId":"ser-mah","feat":"5-51","kind":"Bowling","note":"Gave Maharashtra a 106-run lead","group":"C"},{"rank":33,"player":"Jaskirat Singh","team":"Meghalaya","matchId":"sik-meg","feat":"127","kind":"Batting","note":"Plate","group":"Plate"},{"rank":34,"player":"Shubham Sharma","team":"Madhya Pradesh","matchId":"jk-mp","feat":"79 & second-innings top score","kind":"Batting","note":"Top-scored in both MP innings in Srinagar","group":"A"},{"rank":35,"player":"Rinku Singh","team":"Uttar Pradesh","matchId":"bih-up","feat":"112","kind":"Batting","note":"Batting at five; 200-plus stand with Kaushik","group":"A"}],"innings":[{"id":"bih-up-1","matchId":"bih-up","n":1,"team":"Uttar Pradesh","total":"540","batting":"Madhav Kaushik 150 | Rinku Singh 112 | Aaradhya Yadav 84","bowling":"Amod Yadav 4-91"},{"id":"bih-up-2","matchId":"bih-up","n":2,"team":"Bihar","total":"141","batting":"Mangal Mahrour 25","bowling":"Kartik Yadav 4-26"},{"id":"bih-up-3","matchId":"bih-up","n":3,"team":"Bihar","total":"132 (f/o)","batting":"Mangal Mahrour 27","bowling":"Zeeshan Ansari 4-40"},{"id":"goa-bar-1","matchId":"goa-bar","n":1,"team":"Baroda","total":"472/8d","batting":"Atit Sheth 99 | Mitesh Patel 81 | Shashwat Rawat 69 | Deepak Hooda 52","bowling":"Mohit Redkar 3-120"},{"id":"goa-bar-2","matchId":"goa-bar","n":2,"team":"Goa","total":"199","batting":"Lalit Yadav 54","bowling":"Mahesh Pithiya 5-58 | Bhargav Bhatt 4-51"},{"id":"goa-bar-3","matchId":"goa-bar","n":3,"team":"Goa","total":"138 (f/o)","batting":"Abhinav Tejrana 47","bowling":"Mahesh Pithiya 2-38"},{"id":"vid-pud-1","matchId":"vid-pud","n":1,"team":"Vidarbha","total":"428","batting":"Akshay Wadkar 198 | Yash Rathod 134","bowling":"Sagar Udeshi 4-86"},{"id":"vid-pud-2","matchId":"vid-pud","n":2,"team":"Puducherry","total":"313","batting":"Ritesh Gudge 95","bowling":"Parth Rekhade 3-64 | Aman Mokhade 3-35"},{"id":"vid-pud-3","matchId":"vid-pud","n":3,"team":"Vidarbha","total":"175/3d","batting":"Aman Mokhade 65","bowling":""},{"id":"vid-pud-4","matchId":"vid-pud","n":4,"team":"Puducherry","total":"18/2","batting":"","bowling":""},{"id":"jk-mp-1","matchId":"jk-mp","n":1,"team":"Madhya Pradesh","total":"196","batting":"Shubham Sharma 79","bowling":"Rohit Sharma 5-36 | Sunil Kumar 4-69"},{"id":"jk-mp-2","matchId":"jk-mp","n":2,"team":"Jammu & Kashmir","total":"120","batting":"Kanhaiya Wadhawan 35*","bowling":"Aryan Pandey 3-29 | Avesh Khan 3-44"},{"id":"jk-mp-3","matchId":"jk-mp","n":3,"team":"Madhya Pradesh","total":"249/6d","batting":"","bowling":"Auqib Nabi 3-53"},{"id":"jk-mp-4","matchId":"jk-mp","n":4,"team":"Jammu & Kashmir","total":"61/6","batting":"Kanhaiya Wadhawan 26 (retd hurt) | Lone Nasir 13","bowling":"Avesh Khan 3-16 | Aryan Pandey 3-29"},{"id":"pun-asm-1","matchId":"pun-asm","n":1,"team":"Assam","total":"373","batting":"Sibsankar Roy 143* | Denish Das 103","bowling":"Umesh Yadav 5-70"},{"id":"pun-asm-2","matchId":"pun-asm","n":2,"team":"Punjab","total":"478/6d","batting":"","bowling":""},{"id":"pun-asm-3","matchId":"pun-asm","n":3,"team":"Assam","total":"49/3","batting":"","bowling":""},{"id":"sau-chh-1","matchId":"sau-chh","n":1,"team":"Saurashtra","total":"392","batting":"Prerak Mankad 129 | Ravindra Jadeja 102 | Chirag Jani 83","bowling":""},{"id":"sau-chh-2","matchId":"sau-chh","n":2,"team":"Chhattisgarh","total":"312","batting":"Anuj Tiwary 72 | Mayank Verma 68","bowling":"Ravindra Jadeja 3-40"},{"id":"sau-chh-3","matchId":"sau-chh","n":3,"team":"Saurashtra","total":"229/1","batting":"","bowling":""},{"id":"ap-kar-1","matchId":"ap-kar","n":1,"team":"Karnataka","total":"274","batting":"R Smaran 126 | KL Shrijith 58","bowling":"Saurabh Kumar 3-69"},{"id":"ap-kar-2","matchId":"ap-kar","n":2,"team":"Andhra","total":"418","batting":"Seeram Rahul 119 | Revanth Reddy 97","bowling":"Shikhar Shetty 6-115"},{"id":"ap-kar-3","matchId":"ap-kar","n":3,"team":"Karnataka","total":"337/9d","batting":"Karun Nair 145*","bowling":"Lalith Mohan 4-111 | Saurabh Kumar 3-79"},{"id":"ap-kar-4","matchId":"ap-kar","n":4,"team":"Andhra","total":"55/4","batting":"","bowling":"Rithesh Bhatkal 1-12"},{"id":"hyd-tri-1","matchId":"hyd-tri","n":1,"team":"Tripura","total":"134","batting":"Bikramkumar Das 50","bowling":"G Anikethreddy 5-21"},{"id":"hyd-tri-2","matchId":"hyd-tri","n":2,"team":"Hyderabad","total":"294","batting":"Ruthik Mendhe 61","bowling":"Sandip Sarkar 8-96"},{"id":"hyd-tri-3","matchId":"hyd-tri","n":3,"team":"Tripura","total":"120","batting":"","bowling":"Tanay Thyagarajan 6-52"},{"id":"guj-odi-1","matchId":"guj-odi","n":1,"team":"Odisha","total":"324","batting":"Gourav Choudhury 137 | Sandeep Pattnaik 69","bowling":"Arzan Nagwaswalla 3-65"},{"id":"guj-odi-2","matchId":"guj-odi","n":2,"team":"Gujarat","total":"439","batting":"Vedant Trivedi 108 | Aarya Desai 94 | Urvil Patel 85","bowling":"Biswal 5-118"},{"id":"guj-odi-3","matchId":"guj-odi","n":3,"team":"Odisha","total":"161","batting":"","bowling":"Siddharth Desai 5-36"},{"id":"guj-odi-4","matchId":"guj-odi","n":4,"team":"Gujarat","total":"47/0","batting":"","bowling":""},{"id":"ben-del-1","matchId":"ben-del","n":1,"team":"Delhi","total":"240","batting":"Hrithik Shokeen 56","bowling":"Mohammed Shami 4-30"},{"id":"ben-del-2","matchId":"ben-del","n":2,"team":"Bengal","total":"429","batting":"Abishek Porel 149 | Sudip Gharami 133","bowling":"Ayush Badoni 5-43"},{"id":"ben-del-3","matchId":"ben-del","n":3,"team":"Delhi","total":"261/9 (f/o)","batting":"Ayush Badoni 77+ | Anuj Rawat 39","bowling":"Aamir Gani 2-80"},{"id":"jhk-ker-1","matchId":"jhk-ker","n":1,"team":"Jharkhand","total":"587","batting":"Aditya Singh 147 | Shikhar Mohan 143 | Virat Singh 108","bowling":"Vaisakh Chandran 5-166 | Jalaj Saxena 3-126"},{"id":"jhk-ker-2","matchId":"jhk-ker","n":2,"team":"Kerala","total":"395","batting":"Abhishek P Nair 126 | Aditya Sarwate 95","bowling":"Utkarsh Singh 4-69 | Manishi 4-92"},{"id":"jhk-ker-3","matchId":"jhk-ker","n":3,"team":"Kerala","total":"62/2 (f/o)","batting":"Sachin Baby 37 | Abhishek P Nair 23","bowling":"Utkarsh Singh 1-15"},{"id":"ser-mah-1","matchId":"ser-mah","n":1,"team":"Maharashtra","total":"333","batting":"Ankit Bawne 118 | Prithvi Shaw 70","bowling":"Arjun Sharma 4-75"},{"id":"ser-mah-2","matchId":"ser-mah","n":2,"team":"Services","total":"227","batting":"Nitin Tanwar 61","bowling":"Hitesh Walunj 5-51"},{"id":"ser-mah-3","matchId":"ser-mah","n":3,"team":"Maharashtra","total":"141","batting":"","bowling":"Arjun Sharma 5-58"},{"id":"ser-mah-4","matchId":"ser-mah","n":4,"team":"Services","total":"111/6","batting":"Nakul Sharma 32*","bowling":"Vicky Ostwal 3-48"},{"id":"mum-chd-1","matchId":"mum-chd","n":1,"team":"Mumbai","total":"429","batting":"Siddhesh Lad 86 | Musheer Khan 65 | Tanush Kotian 58","bowling":"Raj Bawa 4-73"},{"id":"mum-chd-2","matchId":"mum-chd","n":2,"team":"Chandigarh","total":"78","batting":"Nishunk Birla 33","bowling":"Tushar Deshpande 5-17 (hat-trick)"},{"id":"mum-chd-3","matchId":"mum-chd","n":3,"team":"Chandigarh","total":"196 (f/o)","batting":"Arjun Azad 62","bowling":"Tanush Kotian 3-30 | Shams Mulani 3-69"},{"id":"raj-tn-1","matchId":"raj-tn","n":1,"team":"Rajasthan","total":"363","batting":"Karan Lamba 113 | Rohan Rajbhar 95","bowling":"P Saravana Kumar 3-68"},{"id":"raj-tn-2","matchId":"raj-tn","n":2,"team":"Tamil Nadu","total":"274","batting":"Andre Siddharth 81 | Pradosh Paul 58 | N Jagadeesan 55","bowling":"Kukna Ajay Singh 5-51"},{"id":"raj-tn-3","matchId":"raj-tn","n":3,"team":"Rajasthan","total":"192/6d","batting":"","bowling":""},{"id":"raj-tn-4","matchId":"raj-tn","n":4,"team":"Tamil Nadu","total":"73/0","batting":"","bowling":""},{"id":"har-hp-1","matchId":"har-hp","n":1,"team":"Himachal Pradesh","total":"253","batting":"Akash Vasisht 113*","bowling":"Anshul Kamboj 4-56"},{"id":"har-hp-2","matchId":"har-hp","n":2,"team":"Haryana","total":"296","batting":"Yashvardhan Dalal 72 | Ankit Kumar 59","bowling":"Aryaman Dhaliwal 4-72"},{"id":"har-hp-3","matchId":"har-hp","n":3,"team":"Himachal Pradesh","total":"113","batting":"Vaibhav Kalta 31","bowling":"Parth Vats 3-22"},{"id":"har-hp-4","matchId":"har-hp","n":4,"team":"Haryana","total":"74/3","batting":"","bowling":""},{"id":"rly-utk-1","matchId":"rly-utk","n":1,"team":"Railways","total":"278","batting":"Vivek Singh 112","bowling":"Devendra Singh Bora 5-49"},{"id":"rly-utk-2","matchId":"rly-utk","n":2,"team":"Uttarakhand","total":"470","batting":"Saurabh Rawat 107 | Avneesh Sudha 90 | Jagadeesha Suchith 62","bowling":"Raj Choudhary 3-94"},{"id":"rly-utk-3","matchId":"rly-utk","n":3,"team":"Railways","total":"156/2","batting":"","bowling":""},{"id":"sik-meg-1","matchId":"sik-meg","n":1,"team":"Sikkim","total":"245","batting":"Satyajeet Bachhav 45","bowling":"Ram Gurung 5-32"},{"id":"sik-meg-2","matchId":"sik-meg","n":2,"team":"Meghalaya","total":"395","batting":"Jaskirat Singh 127 | Kishan Lyngdoh 78 | Swastik Chhetri 72","bowling":"Kranthi Kumar 5-71"},{"id":"sik-meg-3","matchId":"sik-meg","n":3,"team":"Sikkim","total":"291/7","batting":"Parth Palawat 66","bowling":"Abhishek Kumar 3-43"},{"id":"miz-man-1","matchId":"miz-man","n":1,"team":"Mizoram","total":"183","batting":"Chinmay Sutar 35","bowling":"Kishan Singha 6-52"},{"id":"miz-man-2","matchId":"miz-man","n":2,"team":"Manipur","total":"251","batting":"Kangabam Priyojit 87 | Langlonyamba Keishangbam 54 | Kishan Singha 51","bowling":"Khiangte Vanrotlinga 5-66"},{"id":"miz-man-3","matchId":"miz-man","n":3,"team":"Mizoram","total":"295","batting":"Chinmay Sutar 99 | Jehu Anderson 71 | Sahil Reza 51","bowling":"Kishan Singha 4-88 | Johnson Singh 3-15"},{"id":"miz-man-4","matchId":"miz-man","n":4,"team":"Manipur","total":"185/7","batting":"","bowling":"Khiangte Vanrotlinga 3-21"}],"groups":[{"group":"All","headline":"Day 4: J&K are 61/6 in bad light chasing 326 against MP, Services need 137 with four wickets left against Maharashtra, Delhi lead Bengal by 72 with one wicket left, and Jharkhand–Kerala ended in a draw."},{"group":"A","headline":"UP and Baroda have banked innings wins; champions J&K are 61/6 chasing 326 against MP with bad light the main threat to MP, and Puducherry were 18/2 chasing 291 in Nagpur."},{"group":"B","headline":"Karnataka declared at 337/9 and have Andhra 55/4 chasing 194, Assam are still behind Punjab, and Saurashtra are batting out the game against Chhattisgarh."},{"group":"C","headline":"Gujarat beat Odisha by 10 wickets and Jharkhand drew with first-innings points; Services need 137 with four wickets left against Maharashtra, and Delhi lead Bengal by 72 with one wicket left."},{"group":"D","headline":"Haryana joined Mumbai as winners; Tamil Nadu were 73/0 chasing 282 in Jaipur, and Railways were batting out a draw against Uttarakhand."},{"group":"Plate","headline":"Manipur were 185/7, 43 short of 228 against Mizoram, Sikkim lead Meghalaya by 141 with three wickets left, and Nagaland were awarded their opener by forfeit."}],"round":[{"round":"Round 1","dates":"Oct 11–14","day":"Day 4","asOf":"2026-10-14T16:15:00+05:30","headline":"Day 4: J&K are 61/6 in bad light chasing 326 against MP, Services need 137 with four wickets left against Maharashtra, Delhi lead Bengal by 72 with one wicket left, and Jharkhand–Kerala ended in a draw.","finished":8,"live":11}]};
+  const store = {}; IDS.forEach((id) => (store[id] = SEED[id] ? { status: 'ok', data: SEED[id], refreshing: false } : { status: 'loading', data: [], refreshing: false }));
+  const subs = [];
+  const emit = () => subs.forEach((fn) => { try { fn(); } catch (e) { console.error('[ranji]', e); } });
+  const load = () => Promise.all(IDS.map((id) => {
+    if (store[id].status === 'ok') store[id].refreshing = true;
+    return fetch(DATA_BASE + id + '.json?t=' + Math.floor(Date.now() / 60000), { cache: 'no-store' })
+      .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then((d) => { store[id] = { status: 'ok', data: Array.isArray(d) ? d : (d.rows || d.data || []), refreshing: false }; })
+      .catch(() => { if (store[id].status !== 'ok') store[id] = { status: 'error', data: [], refreshing: false }; else store[id].refreshing = false; });
+  })).then(emit);
+  const dash = {
+    data: (id) => store[id] || { status: 'missing', data: [] },
+    onData: (fn) => { subs.push(fn); try { fn(); } catch (e) { console.error('[ranji]', e); } },
+    colors: ['#1f6f4a'],
+    setLink: (name) => { try { history.replaceState(null, '', '#' + name); } catch (e) {} },
+  };
+  if (!DATA_BASE.includes('__' + 'OWNER' + '__')) { load(); setInterval(load, 5 * 60 * 1000); }
+
+(() => {
+  const GROUPS = ['A', 'B', 'C', 'D', 'Plate'];
+  const TABS = [['All', 'All games'], ['Live', 'Live'], ['Results', 'Results'], ['A', 'Group A'], ['B', 'Group B'], ['C', 'Group C'], ['D', 'Group D'], ['Plate', 'Plate']];
+  const ORDER = { 'Outright possible': 0, 'In the balance': 1, 'Lead likely': 2, 'Lead secured': 3, 'Awaiting data': 4, 'Finished': 5 };
+  const ORD = ['1st', '2nd', '3rd', '4th'];
+  const CODE = { 'Uttar Pradesh': 'UP', 'Bihar': 'BIH', 'Goa': 'GOA', 'Baroda': 'BRD', 'Vidarbha': 'VID', 'Puducherry': 'PDC', 'Madhya Pradesh': 'MP', 'Jammu & Kashmir': 'J&K', 'Assam': 'ASM', 'Punjab': 'PUN', 'Saurashtra': 'SAU', 'Chhattisgarh': 'CHH', 'Andhra': 'AND', 'Karnataka': 'KAR', 'Hyderabad': 'HYD', 'Tripura': 'TRI', 'Gujarat': 'GUJ', 'Odisha': 'ODI', 'Bengal': 'BEN', 'Delhi': 'DEL', 'Jharkhand': 'JHA', 'Kerala': 'KER', 'Services': 'SER', 'Maharashtra': 'MAH', 'Mumbai': 'MUM', 'Chandigarh': 'CHD', 'Rajasthan': 'RAJ', 'Tamil Nadu': 'TN', 'Haryana': 'HAR', 'Himachal Pradesh': 'HP', 'Railways': 'RLY', 'Uttarakhand': 'UKD', 'Sikkim': 'SIK', 'Meghalaya': 'MEG', 'Mizoram': 'MIZ', 'Manipur': 'MAN', 'Nagaland': 'NAG', 'Arunachal Pradesh': 'ARP' };
+  const state = { tab: 'All', game: null, allStars: false };
+  const $ = (id) => document.getElementById(id);
+  const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+  const split = (s) => String(s || '').split(' | ').filter(Boolean);
+  const gname = (g) => (g === 'Plate' ? 'Plate' : 'Group ' + g);
+  const sKey = (s) => (s === 'Finished' ? 'done' : s === 'Outright possible' ? 'hot' : s === 'In the balance' ? 'tight' : 'calm');
+  const sLabel = (s) => (s === 'Outright possible' ? 'Result possible' : s);
+  const isLive = (r) => r.state !== 'Finished';
+  const isGroup = (t) => GROUPS.includes(t);
+  const rx = document.querySelector('.rx');
+  try { if (dash.colors && dash.colors[0]) rx.style.setProperty('--rx-accent', dash.colors[0]); } catch (e) {}
+  const rowsOf = (id) => { const d = dash.data(id); return d.status === 'ok' && Array.isArray(d.data) ? d.data : null; };
+  const fmtTime = (s) => { const d = new Date(s); return isNaN(d) ? String(s) : d.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit' }) + ' IST'; };
+  const sortRows = (rows) => rows.slice().sort((a, b) => (ORDER[a.state] ?? 9) - (ORDER[b.state] ?? 9) || GROUPS.indexOf(a.group) - GROUPS.indexOf(b.group));
+  const pass = (r) => state.tab === 'All' || (state.tab === 'Live' ? isLive(r) : state.tab === 'Results' ? !isLive(r) : r.group === state.tab);
+
+  const hue = (name) => { let h = 0; for (const c of String(name)) h = (h * 31 + c.charCodeAt(0)) % 360; return h; };
+  const badge = (team, size) => {
+    const b = el('span', 'rx-badge' + (size ? ' rx-' + size : ''), CODE[team] || String(team || '?').slice(0, 3).toUpperCase());
+    b.style.setProperty('--h', String(hue(team)));
+    b.setAttribute('aria-hidden', 'true');
+    return b;
+  };
+
+  const link = () => dash.setLink(state.game ? 'game-' + state.game : state.tab === 'All' ? 'top' : 'tab-' + state.tab.toLowerCase());
+  const openGame = (id) => { state.game = id; link(); draw(); try { $('top').scrollIntoView({ block: 'start' }); } catch (e) {} };
+  const closeGame = () => { const id = state.game; state.game = null; link(); draw(); try { const t = $('card-' + id); if (t) t.scrollIntoView({ block: 'center' }); } catch (e) {} };
+  const setTab = (t) => { state.tab = t; state.game = null; state.allStars = false; link(); draw(); };
+  document.addEventListener('keydown', (e) => {
+    if (!state.game) return;
+    if (e.key === 'Escape') closeGame();
+    else if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { const n = neighbours(); const t = e.key === 'ArrowRight' ? n.next : n.prev; if (t) openGame(t); }
+  });
+
+  const drawTabs = (m) => {
+    $('tabs').replaceChildren(...TABS.map(([k, label]) => {
+      const b = el('button', null, label);
+      b.id = 'tab-' + k.toLowerCase();
+      if (m && k !== 'All') b.append(el('small', null, String(m.filter((r) => (k === 'Live' ? isLive(r) : k === 'Results' ? !isLive(r) : r.group === k)).length)));
+      b.setAttribute('aria-pressed', String(k === state.tab && !state.game));
+      b.addEventListener('click', () => setTab(k));
+      return b;
+    }));
+  };
+
+  const drawHeader = () => {
+    const rd = rowsOf('round');
+    document.querySelectorAll('.rx-mast [data-source="round"]').forEach((n) => {
+      const v = rd && rd[0] ? rd[0][n.dataset.field] : null;
+      n.textContent = v == null ? '—' : n.classList.contains('rx-asof') ? fmtTime(v) : String(v);
+    });
+    const at = rd && rd[0] ? new Date(rd[0].asOf) : null;
+    $('upd').classList.toggle('rx-stale', !!at && !isNaN(at) && Date.now() - at.getTime() > 2.5 * 3600e3);
+    const key = isGroup(state.tab) ? state.tab : 'All';
+    const take = $('takeaway'), g = rowsOf('groups');
+    take.setAttribute('data-where', 'group=' + key);
+    if (g) {
+      take.classList.remove('dash-skeleton');
+      const r = g.find((x) => x.group === key) || g.find((x) => x.group === 'All');
+      take.textContent = r ? r.headline : '—';
+    } else if (dash.data('groups').status === 'error') { take.classList.remove('dash-skeleton'); take.textContent = '—'; }
+  };
+
+  const teamRow = (team, score, lead, size) => {
+    const row = el('div', 'rx-team');
+    const n = el('div', 'rx-tname', team);
+    n.title = team;
+    if (lead) n.append(el('small', null, 'First-innings lead'));
+    row.append(badge(team, size), n, el('div', 'rx-score', score));
+    return row;
+  };
+  const stateTag = (s) => { const t = el('span', 'rx-state rx-s-' + sKey(s)); t.append(el('i'), document.createTextNode(sLabel(s))); return t; };
+
+  const card = (r) => {
+    const c = el('button', 'rx-card' + (r.state === 'Finished' ? ' rx-done' : ''));
+    c.id = 'card-' + r.id;
+    c.setAttribute('aria-label', r.teamA + ' ' + r.scoreA + ', ' + r.teamB + ' ' + r.scoreB + '. ' + (r.result || r.situation));
+    const meta = el('div', 'rx-cmeta');
+    meta.append(el('span', null, gname(r.group) + ' · ' + r.venue), stateTag(r.state));
+    const teams = el('div', 'rx-teams');
+    teams.append(teamRow(r.teamA, r.scoreA, r.teamA === r.firstInningsLead), teamRow(r.teamB, r.scoreB, r.teamB === r.firstInningsLead));
+    c.append(meta, teams, el('div', 'rx-csit', r.result || r.situation));
+    c.addEventListener('click', () => openGame(r.id));
+    return c;
+  };
+
+  const drawGames = (m) => {
+    const g = $('grid');
+    $('games-h').textContent = TABS.find(([k]) => k === state.tab)[1];
+    if (dash.data('matches').status === 'error') { g.replaceChildren(el('div', 'rx-fail', 'Failed to load')); $('games-n').textContent = ''; return; }
+    if (!m) { g.replaceChildren(); return; }
+    const rows = sortRows(m.filter(pass));
+    $('games-n').textContent = rows.length + (rows.length === 1 ? ' game' : ' games');
+    g.replaceChildren(...(rows.length ? rows.map(card) : [el('p', 'rx-empty', state.tab === 'Results' ? 'No results yet.' : 'Nothing here right now.')]));
+  };
+
+  const drawStars = (s, m) => {
+    const strip = $('stand-strip'), more = $('stand-more');
+    const key = isGroup(state.tab) ? state.tab : 'All';
+    $('stand-h').textContent = key === 'All' ? 'Players of the round' : gname(key) + ' standouts';
+    if (dash.data('standouts').status === 'error') { strip.replaceChildren(el('div', 'rx-fail', 'Failed to load')); more.hidden = true; return; }
+    if (!s) { strip.replaceChildren(); more.hidden = true; return; }
+    const rows = s.filter((r) => key === 'All' || r.group === key).sort((a, b) => a.rank - b.rank);
+    const shown = state.allStars ? rows : rows.slice(0, 6);
+    strip.replaceChildren(...shown.map((r, i) => {
+      const c = el('button', 'rx-star' + (r.kind === 'India watch' ? ' rx-india' : ''));
+      const top = el('div', 'rx-star-top');
+      top.append(el('span', 'rx-star-rank', 'No. ' + (i + 1)), badge(r.team, 'sm'));
+      c.append(top, el('div', 'rx-star-feat', r.feat), el('div', 'rx-star-name', r.player), el('div', 'rx-star-note', r.team + ' · ' + r.note), el('div', 'rx-star-tag', r.kind));
+      c.title = 'Open ' + r.player + "'s game";
+      c.addEventListener('click', () => openGame(r.matchId));
+      return c;
+    }));
+    more.hidden = rows.length <= 6;
+    more.textContent = state.allStars ? 'Show top 6' : 'See all ' + rows.length;
+  };
+  $('stand-more').addEventListener('click', () => { state.allStars = !state.allStars; draw(); });
+
+  const order = () => sortRows((rowsOf('matches') || []).filter(pass));
+  const neighbours = () => {
+    const o = order(), i = o.findIndex((r) => r.id === state.game);
+    return { prev: i > 0 ? o[i - 1].id : null, next: i >= 0 && i < o.length - 1 ? o[i + 1].id : null };
+  };
+  const copyText = (text, node, btn) => {
+    const ok = () => { btn.textContent = 'Copied ✓'; setTimeout(() => (btn.textContent = 'Copy summary'), 1600); };
+    const fallback = () => { try { const r = document.createRange(); r.selectNodeContents(node); const s = window.getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = 'Selected — press Ctrl/⌘+C'; } catch (e) {} };
+    try { navigator.clipboard.writeText(text).then(ok, fallback); } catch (e) { fallback(); }
+  };
+
+  const drawGame = (m, inns, s) => {
+    const sec = $('game');
+    const r = m && m.find((x) => x.id === state.game);
+    if (!r) { sec.replaceChildren(el('p', 'rx-muted', m ? 'That game is not in this round any more.' : '')); return; }
+
+    const bar = el('div', 'rx-dbar');
+    const back = el('button', 'rx-nav', '← All games');
+    back.addEventListener('click', closeGame);
+    const nb = neighbours();
+    const steps = el('div', 'rx-steps');
+    const prev = el('button', 'rx-nav', '‹ Previous'), next = el('button', 'rx-nav', 'Next ›');
+    prev.disabled = !nb.prev; next.disabled = !nb.next;
+    prev.addEventListener('click', () => nb.prev && openGame(nb.prev));
+    next.addEventListener('click', () => nb.next && openGame(nb.next));
+    steps.append(prev, next);
+    bar.append(back, steps);
+
+    const hero = el('div', 'rx-hero');
+    const meta = el('div', 'rx-cmeta');
+    meta.append(el('span', null, gname(r.group) + ' · ' + r.venue + ' · ' + (r.state === 'Finished' ? 'Result' : r.status)), stateTag(r.state));
+    const teams = el('div', 'rx-teams');
+    teams.append(teamRow(r.teamA, r.scoreA, r.teamA === r.firstInningsLead, 'lg'), teamRow(r.teamB, r.scoreB, r.teamB === r.firstInningsLead, 'lg'));
+    const act = el('div', 'rx-actions');
+    const a = el('a', 'rx-btn', r.scorecardExact ? 'Full scorecard ↗' : 'Find scorecard ↗');
+    a.href = r.scorecardUrl; a.target = '_blank'; a.rel = 'noopener'; a.title = 'Opens on ESPNcricinfo';
+    act.append(a);
+    hero.append(meta, teams, el('div', 'rx-hsit', r.result || r.situation), act);
+
+    const cols = el('div', 'rx-cols');
+    const left = el('div');
+    if (r.endSummary) {
+      left.append(el('h3', 'rx-h3', 'Match summary'));
+      const p = el('p', 'rx-summary', r.endSummary);
+      const b = el('button', 'rx-btn rx-ghost', 'Copy summary');
+      b.addEventListener('click', () => copyText(r.endSummary, p, b));
+      left.append(p, b, el('div', 'rx-gap'));
+    }
+    left.append(el('h3', 'rx-h3', 'Key insights'));
+    const ins = el('ul', 'rx-ins');
+    split(r.notes).forEach((n) => ins.append(el('li', null, n)));
+    left.append(ins);
+    const st = (s || []).filter((x) => x.matchId === r.id).sort((x, y) => x.rank - y.rank);
+    if (st.length) {
+      left.append(el('div', 'rx-gap'), el('h3', 'rx-h3', 'Standouts'));
+      const strip = el('div', 'rx-strip');
+      strip.style.gridAutoColumns = 'minmax(11rem, 1fr)';
+      st.forEach((x) => {
+        const c = el('div', 'rx-star' + (x.kind === 'India watch' ? ' rx-india' : ''));
+        c.style.cursor = 'default';
+        const top = el('div', 'rx-star-top'); top.append(el('span', 'rx-star-rank', 'Round No. ' + x.rank), badge(x.team, 'sm'));
+        c.append(top, el('div', 'rx-star-feat', x.feat), el('div', 'rx-star-name', x.player), el('div', 'rx-star-note', x.note));
+        strip.append(c);
+      });
+      left.append(strip);
+    }
+
+    const right = el('div');
+    right.append(el('h3', 'rx-h3', 'Innings by innings'));
+    const list = el('div', 'rx-inns');
+    const mine = (inns || []).filter((x) => x.matchId === r.id).sort((x, y) => x.n - y.n);
+    if (!mine.length) list.append(el('p', 'rx-muted', inns ? 'Innings details arrive with the next update.' : ''));
+    mine.forEach((x) => {
+      const row = el('div', 'rx-inn');
+      const mid = el('div');
+      mid.append(el('div', 'rx-inn-n', (ORD[x.n - 1] || x.n + 'th') + ' innings'), el('div', 'rx-inn-t', x.team));
+      row.append(badge(x.team, 'sm'), mid, el('div', 'rx-inn-tot', x.total || '—'));
+      const p = el('div', 'rx-inn-p');
+      const bat = split(x.batting), bowl = split(x.bowling);
+      if (bat.length) { p.append(el('b', null, 'Bat  '), document.createTextNode(bat.join(' · '))); }
+      if (bowl.length) { if (bat.length) p.append(el('br')); p.append(el('b', null, 'Bowl  '), document.createTextNode(bowl.join(' · '))); }
+      if (!bat.length && !bowl.length) p.append(document.createTextNode('Details not yet picked up'));
+      row.append(p);
+      list.append(row);
+    });
+    right.append(list);
+    cols.append(left, right);
+    sec.replaceChildren(bar, hero, cols);
+  };
+
+  const draw = () => {
+    const m = rowsOf('matches');
+    drawTabs(m);
+    drawHeader();
+    const detail = !!state.game;
+    $('list-view').hidden = detail;
+    $('game').hidden = !detail;
+    if (detail) drawGame(m, rowsOf('innings'), rowsOf('standouts'));
+    else { drawStars(rowsOf('standouts'), m); drawGames(m); }
+  };
+
+  const h = location.hash.slice(1);
+  if (h.startsWith('game-')) state.game = h.slice(5);
+  else if (h.startsWith('tab-')) { const t = TABS.find(([k]) => 'tab-' + k.toLowerCase() === h); if (t) state.tab = t[0]; }
+
+  dash.onData(draw);
+})();
+}
+</script>
