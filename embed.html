@@ -123,6 +123,48 @@
 .rx-site .rx-fail::before { content: ""; width: .375rem; height: .375rem; border-radius: 50%; background: var(--color-bad); }
 [data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
 .rx-site [hidden] { display: none !important; }
+/* ---- phone & overflow fixes ---- */
+.rx-site .rx .rx-wrap .rx-wrap { margin-inline: 0; width: 100%; max-width: none; }
+
+.rx-site .rx .rx-wrap, .rx-site .rx .rx-wrap > *, .rx-site .rx section, .rx-site .rx .rx-grid > * { min-width: 0; }
+.rx-site .rx .rx-strip { scroll-snap-type: x mandatory; overscroll-behavior-x: contain; }
+.rx-site .rx .rx-strip > * { scroll-snap-align: start; }
+.rx-site .rx .rx-tabs { scroll-snap-type: x proximity; -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent); mask-image: linear-gradient(90deg, #000 85%, transparent); padding-right: 2rem; }
+@media (max-width: 600px) {
+  .rx-site .rx .rx-wrap { padding: 1.1rem .9rem 2rem; gap: 1.6rem; }
+  .rx-site .rx .rx-kick { gap: .6rem; font-size: .7rem; }
+  .rx-site .rx .rx-title { font-size: 2.1rem; }
+  .rx-site .rx .rx-take { font-size: 1.02rem; }
+  .rx-site .rx .rx-facts { gap: 1.25rem; display: grid; grid-template-columns: repeat(3, auto); justify-content: start; }
+  .rx-site .rx .rx-fact b { font-size: 1.7rem; }
+  .rx-site .rx .rx-upd { grid-column: 1 / -1; margin-left: 0; }
+  .rx-site .rx .rx-tabs { gap: 1.1rem; margin-inline: -.9rem; padding-left: .9rem; }
+  .rx-site .rx .rx-sh h2 { font-size: 1.35rem; }
+  .rx-site .rx .rx-strip { grid-auto-columns: 78%; margin-inline: -.9rem; padding-inline: .9rem; scroll-padding-inline: .9rem; }
+  .rx-site .rx .rx-star { padding: 1rem; }
+  .rx-site .rx .rx-grid { gap: .9rem; }
+  .rx-site .rx .rx-card { padding: 1rem 1rem .8rem; gap: .8rem; }
+  .rx-site .rx .rx-badge { width: 2.1rem; height: 2.1rem; font-size: .62rem; }
+  .rx-site .rx .rx-badge.rx-lg { width: 2.6rem; height: 2.6rem; font-size: .7rem; }
+  .rx-site .rx .rx-tname { font-size: 1rem; }
+  .rx-site .rx .rx-score { font-size: 1.15rem; }
+  /* game view */
+  .rx-site .rx .rx-dbar { gap: .5rem; }
+  .rx-site .rx .rx-dbar > .rx-nav { order: 0; }
+  .rx-site .rx .rx-steps { margin-left: auto; }
+  .rx-site .rx .rx-nav { padding: .35rem .75rem; font-size: .88rem; }
+  .rx-site .rx .rx-hero { padding: 1.1rem; gap: 1rem; border-radius: 16px; }
+  .rx-site .rx .rx-hero .rx-team { grid-template-columns: auto minmax(0, 1fr); row-gap: .1rem; }
+  .rx-site .rx .rx-hero .rx-team .rx-score { grid-column: 2; font-size: 1.55rem; }
+  .rx-site .rx .rx-hero .rx-tname { white-space: normal; font-size: 1.3rem; line-height: 1.15; }
+  .rx-site .rx .rx-hero .rx-cmeta { flex-wrap: wrap; row-gap: .3rem; }
+  .rx-site .rx .rx-hsit { font-size: 1.08rem; }
+  .rx-site .rx .rx-actions .rx-btn { flex: 1 1 auto; justify-content: center; }
+  .rx-site .rx .rx-cols { gap: 1.75rem; }
+  .rx-site .rx .rx-h3 { font-size: 1.2rem; }
+  .rx-site .rx .rx-summary { font-size: 1rem; }
+  .rx-site .rx .rx-inn { grid-template-columns: auto minmax(0, 1fr) auto; gap: .35rem .7rem; }
+}
 </style>
 <div class="rx-site"><div class="rx">
   <div class="rx-wrap">
