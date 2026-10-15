@@ -85,9 +85,9 @@
   "matchId": "vid-pud",
   "n": 4,
   "team": "Puducherry",
-  "total": "18/2",
-  "batting": "",
-  "bowling": ""
+  "total": "130",
+  "batting": "Prasad Pawar 48 | Sagar Trivedi 20",
+  "bowling": "Harsh Dubey 4-29 | Parth Rekhade 3-43"
  },
  {
   "id": "jk-mp-1",
@@ -121,8 +121,8 @@
   "matchId": "jk-mp",
   "n": 4,
   "team": "Jammu & Kashmir",
-  "total": "61/6",
-  "batting": "Kanhaiya Wadhawan 26 (retd hurt) | Lone Nasir 13",
+  "total": "88/7",
+  "batting": "Auqib Nabi 30 | Kanhaiya Wadhawan 27 | Lone Nasir 13",
   "bowling": "Avesh Khan 3-16 | Aryan Pandey 3-29"
  },
  {
@@ -148,7 +148,7 @@
   "matchId": "pun-asm",
   "n": 3,
   "team": "Assam",
-  "total": "49/3",
+  "total": "157/6",
   "batting": "",
   "bowling": ""
  },
@@ -211,7 +211,7 @@
   "matchId": "ap-kar",
   "n": 4,
   "team": "Andhra",
-  "total": "55/4",
+  "total": "104/4",
   "batting": "",
   "bowling": "Rithesh Bhatkal 1-12"
  },
@@ -301,9 +301,18 @@
   "matchId": "ben-del",
   "n": 3,
   "team": "Delhi",
-  "total": "261/9 (f/o)",
-  "batting": "Ayush Badoni 77+ | Anuj Rawat 39",
-  "bowling": "Aamir Gani 2-80"
+  "total": "277 (f/o)",
+  "batting": "Ayush Badoni 85 | Anuj Rawat 39",
+  "bowling": "Pradipta Pramanik 3-72 | Aamir Gani 2-84"
+ },
+ {
+  "id": "ben-del-4",
+  "matchId": "ben-del",
+  "n": 4,
+  "team": "Bengal",
+  "total": "89/1",
+  "batting": "Ankur Paul 38 | Abhimanyu Easwaran 34",
+  "bowling": "Hrithik Shokeen 1-27"
  },
  {
   "id": "jhk-ker-1",
@@ -364,9 +373,9 @@
   "matchId": "ser-mah",
   "n": 4,
   "team": "Services",
-  "total": "111/6",
-  "batting": "Nakul Sharma 32*",
-  "bowling": "Vicky Ostwal 3-48"
+  "total": "120",
+  "batting": "Nakul Sharma 36 | Ravi Chauhan 26 | Mohit Ahlawat 15",
+  "bowling": "Vicky Ostwal 5-50 | Siddhesh Veer 3-27 | Hitesh Walunj 2-28"
  },
  {
   "id": "mum-chd-1",
@@ -428,7 +437,7 @@
   "n": 4,
   "team": "Tamil Nadu",
   "total": "73/0",
-  "batting": "",
+  "batting": "N Jagadeesan 42* | Sai Sudharsan 26*",
   "bowling": ""
  },
  {
@@ -490,8 +499,8 @@
   "matchId": "rly-utk",
   "n": 3,
   "team": "Railways",
-  "total": "156/2",
-  "batting": "",
+  "total": "272/4",
+  "batting": "Vivek Singh 58 | Suraj Ahuja 53",
   "bowling": ""
  },
  {
@@ -553,8 +562,8 @@
   "matchId": "miz-man",
   "n": 4,
   "team": "Manipur",
-  "total": "185/7",
-  "batting": "",
-  "bowling": "Khiangte Vanrotlinga 3-21"
+  "total": "228/7",
+  "batting": "Pheiroijam Jotin Singh 105 | Johnson Singh 51",
+  "bowling": "Khiangte Vanrotlinga 3-42 | Lalrempuia Chhakchhuak 2-64"
  }
 ]
